@@ -1,0 +1,50 @@
+
+
+
+/* PAGINA ADMINISTRADOR */
+
+.lineaHoriz{
+
+    border: none; 
+    height: 20px;
+    color: #fbc827;
+    background-color: #FBC827;
+    margin: 0px;
+    opacity: 100%;
+
+}
+
+.fuentNavBrand{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+.colorgris{
+    background-color: #3E3E3E;
+}
+
+.botonagregar{
+    background-color: #3E3E3E;
+    border: #FBC827 3px solid;
+    color: #FBC827;
+    padding: 20px;
+}
+
+.cardsProductos{
+    border: 0px;
+}
+
+.card-footer{
+    border: 0px;
+    background-color: white;
+}
+
+.precioCard{
+
+    color: #3E3E3E;
+    border-top: #FBC827 2px solid;
+    border-bottom: #FBC827 2px solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin: 5px 10px;
+}
