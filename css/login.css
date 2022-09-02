@@ -1,0 +1,27 @@
+/* Fuente Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Orbitron&display=swap');
+
+/* Fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.monserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos */
+
+.formulario{
+
+}
+
+.titulo{
+    font-size: 1cm;
+}
+
+.centrarElementos{
+    justify-content: center;
+}
