@@ -14,33 +14,96 @@
     <link rel="stylesheet" href="/css/login.css">
     <title>RollingMarket</title>
   </head>
-  <body class="">
+  <body class="fondoAmarilloPrincipal">
 <header></header>
 <main class="">
   <section class="container">
     <h4 class="poppins titulo my-5 text-center">Bienvenido a Rolling Market</h4>
     <div class="row centrarElementos">
-      <div class="row col-sm-12 col-md-4 col-lg-3 my-5 ms-3">
-        <h4 class="monserrat">Inicio de sesion</h4>
-          <p class="poppins">Si ya tienes una cuenta por favor inicia sesion aqui</p>
-          <input class="my-1" type="email" placeholder="Email" minlength="15" maxlength="30" required>
-          <input class="my-1" type="password" placeholder="Contraseña" minlength="10" maxlength="20" required>
-          <button type="submit" class="btn btn-dark my-2">Iniciar Sesion</button>
+      <div class="row col-10 col-md-4 col-lg-4 my-5 ms-3 p-3 cajaInicioSesion">
+        <form>
+        <h4 class="monserrat colorAmarilloPrincipal">Inicio de sesion</h4>
+          <p class="poppins text-light">Si ya tienes una cuenta por favor inicia sesion aqui</p>
+          <div>
+          <label for="email"></p></label>
+          <input class="my-1 input" id="email" type="email" placeholder="Email" minlength="15" maxlength="30" required>
+        </div>
+        <div>
+        <label for="contraseña"></label>
+          <input class="my-1 input" id="contraseña" type="password" placeholder="Contraseña" minlength="10" maxlength="20" required>
+        </div>
+          <button type="submit" class="btn botonAmarillo w-50 my-2">Iniciar Sesion</button>
       </div>
+      </form>
       <div class=" col-sm-12 col-md-4 col-lg-3 my-5 ms-3">
-        <form class="row formulario">
-          <h4 class="monserrat">¿Aún no estas registrado?</h4>
-          <p class="poppins">Crear una cuenta gratis</p>
-          <input class="my-1" type="text" placeholder="Nombre" minlength="10" maxlength="30" required>
-          <input class="my-1" type="email" placeholder="Email" minlength="15" maxlength="30" required>
-          <input class="my-1" type="password" placeholder="Contraseña" minlength="10" maxlength="20" required>
-          <button type="submit" class="btn btn-dark my-2">Registro</button>
+        <h3 class="monserrat subtitulos">¿No estas registrado?</h3>
+        <p class="poppins lead">Crea tu cuenta de forma gratuita aqui</p>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalFormulario" >Crear cuenta</button>
         </div>
         </form>
       </div>
     </div> 
   </div>
-  </section>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="modalFormulario" tabindex="-1" role="dialog" aria-labelledby="modalFormularioLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFormularioLabel">REGISTRO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label 
+            for="nombreYapellido" 
+            class="form-label">Nombre y Apellido</label>
+            <input
+             type="text" 
+            id="nombreYapellido" 
+            placeholder="Juan Perez" 
+            class="form-control" 
+            minlength="10" 
+            maxlength="50" 
+            required>
+           </div>
+           <div class="mb-3">
+            <label 
+            for="mail" 
+            class="form-label">Email</label>
+            <input 
+            type="email" 
+            id="mail" 
+            placeholder="JuanPerez32@gmail.com" 
+            class="form-control" 
+            minlength="10" 
+            maxlength="80" 
+            required>
+           </div>
+           <div class="mb-3">
+             <label 
+             for="Contraseña" 
+             class="form-label">Contraseña</label>
+             <input 
+             type="password" 
+             id="Contraseña" 
+             placeholder="Minimo 10 letras" 
+             class="form-control" 
+             minlength="10" 
+             maxlength="50" 
+             required>
+            </div>
+            <button type="submit">Crear Cuenta</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
 </main>
 <footer></footer>
     <script

@@ -12,6 +12,32 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Fuente colores principales */
+.colorAmarilloPrincipal{
+  color: #fbc827;
+}
+
+.colorNegroOscuroPrincipal{
+    color: #1C1C1C;
+}
+
+.colorGrisOscuroPrincipal{
+    color: #3e3e3e;
+}
+
+/* Fondos colores principales */
+
+  .fondoAmarilloPrincipal{
+    background-color: #fbc827;
+  }
+
+  .fondoNegroOscuroPrincipal{
+    background-color: #1C1C1C;
+}
+
+  .colorGrisOscuroPrincipal{
+    background-color: #3e3e3e;
+}
 /* Estilos */
 
 .formulario{
@@ -22,6 +48,32 @@
     font-size: 1cm;
 }
 
+.subtitulos{
+    font-size: 0.8cm;
+}
+
 .centrarElementos{
     justify-content: center;
+}
+
+.width{
+    width: 100%;
+}
+
+.botonAmarillo{
+    background-color: #fbc827;
+    font-weight: bold;
+}
+
+.direccionColumna{
+    justify-content: flex-end;
+}
+
+.cajaInicioSesion{
+    background-color: #3e3e3e;
+    border-radius: 0.5cm;
+}
+
+.input{
+    height: 50px;
 }
