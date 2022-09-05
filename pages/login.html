@@ -21,24 +21,43 @@
     <h4 class="poppins titulo my-5 text-center">Bienvenido a Rolling Market</h4>
     <div class="row centrarElementos">
       <div class="row col-10 col-md-4 col-lg-4 my-5 ms-3 p-3 cajaInicioSesion">
-        <form>
+        <form id="iniciaFormulario">
         <h4 class="monserrat colorAmarilloPrincipal">Inicio de sesion</h4>
           <p class="poppins text-light">Si ya tienes una cuenta por favor inicia sesion aqui</p>
           <div>
           <label for="email"></p></label>
-          <input class="my-1 input" id="email" type="email" placeholder="Email" minlength="15" maxlength="30" required>
+          <input 
+          name="nameImputEmail"
+          class="my-1 input" 
+          id="iniciaremail" 
+          type="email" 
+          placeholder="Email" 
+          minlength="15" 
+          maxlength="30" 
+          required>
         </div>
         <div>
         <label for="contraseña"></label>
-          <input class="my-1 input" id="contraseña" type="password" placeholder="Contraseña" minlength="10" maxlength="20" required>
+          <input 
+          name="nameImputContraseña"
+          class="my-1 input" 
+          id="iniciarcontraseña" 
+          type="password" 
+          placeholder="Contraseña" 
+          minlength="10" 
+          maxlength="20" 
+          required>
         </div>
-          <button type="submit" class="btn botonAmarillo w-50 my-2">Iniciar Sesion</button>
+        <button type="submit">Iniciar sesion</button>
       </div>
       </form>
       <div class=" col-sm-12 col-md-4 col-lg-3 my-5 ms-3">
         <h3 class="monserrat subtitulos">¿No estas registrado?</h3>
         <p class="poppins lead">Crea tu cuenta de forma gratuita aqui</p>
-        <button type="button" data-bs-toggle="modal" data-bs-target="#modalFormulario" >Crear cuenta</button>
+        <button 
+        type="button" 
+        data-bs-toggle="modal" 
+        data-bs-target="#modalFormulario" >Crear cuenta</button>
         </div>
         </form>
       </div>
@@ -129,6 +148,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/login.js" type="module"></script>
   </body>
 </html>

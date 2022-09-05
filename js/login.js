@@ -2,12 +2,33 @@
 import { cantidadCaracteres, validarContraseña, validarEmail } from "./helpers.js";
 import {Usuario} from "./claseUsuario.js";
 
+
+
+// formulario inicio sesion
+let iniciaSesionEmail = document.querySelector('#iniciaremail');
+let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
+
+let inicioFormulario = document.querySelector("#iniciaFormulario");
+inicioFormulario.addEventListener("submit", iniciarSesion);
+
+let nombreUsuario = "rolling@gmail.com";
+let iniciarClave = "Matias1234@";
+
+
+function iniciarSesion(e){
+    e.preventDefault();
+if (iniciaSesionEmail.value == nombreUsuario && iniciaSesionContraseña.value == iniciarClave){
+    
+window.location="/pages/pagAdmin.html";
+}
+}
+
+// formulario registro (modal)
 let formulario = document.querySelector("#formularioEntero");
 let nombreIngresado = document.querySelector('#nombreCompleto');
 let mailIngresado = document.querySelector('#mailIngresado');
 let contraseñaIngresada = document.querySelector('#contraseñaIngresada');
 const crearModal = new bootstrap.Modal(document.querySelector("#modalFormulario"));
-
 
 formulario.addEventListener("submit", crearUsuario);
 nombreIngresado.addEventListener("blur", ()=>{cantidadCaracteres(nombreIngresado)});
@@ -32,7 +53,13 @@ function crearUsuario(e){
             formulario.reset()};
         console.log(listaUsuarios);
         crearModal.hide();
-        alert("usuario creado con exito");
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Usuario creado con exito',
+            showConfirmButton: false,
+            timer: 1500
+          })
 
 }else{
 alert("debe completar todos los datos")
