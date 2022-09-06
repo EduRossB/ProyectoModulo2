@@ -1,0 +1,11 @@
+/* pagina acerca de nosotros */
+.cabecera{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.tamañoImg{
+    width: 100px;
+    height: 100px;
+}
+/* pagina acerca de nosotros */
