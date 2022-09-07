@@ -17,7 +17,7 @@ export function caracteresDescripcion(input){
     }
 }
 export function linkImagenValidacion(input){
-    let patron = /^([a-z0-9_-]+\.){1,2}[a-z]{2,6}(\.[a-z]{2,6})$/
+    let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/
     if(patron.test(input.value)){
         input.className = 'form-control is-valid';
         return true;
