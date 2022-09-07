@@ -51,7 +51,7 @@ header .textos-header{
 }
 
 /* about us */
-.contenedor-sobreNosotros{
+.contenedor-sobre-nosotros{
     display: flex;
     justify-content: space-evenly;
 }
