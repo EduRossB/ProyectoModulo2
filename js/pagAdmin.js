@@ -1,5 +1,5 @@
 import { Producto } from "./classProductos.js";
-import {caracteresDescripcion, caracteresProducto, linkImagenValidacion} from "./helpersAdmin.js";
+import {caracteresDescripcion, caracteresProducto, linkImagenValidacion, numerosPrecio} from "./helpersAdmin.js";
 
 let codigo = document.querySelector("#codigo");
 let nombreProducto = document.querySelector("#nombreProducto");
@@ -20,7 +20,7 @@ const modalProducto = new bootstrap.Modal(
 nombreProducto.addEventListener("blur", ()=>{caracteresProducto(nombreProducto)})
 descripcion.addEventListener("blur", ()=>{caracteresDescripcion(descripcion)})
 imagen.addEventListener("blur", ()=>{linkImagenValidacion(imagen)})
-descripcion.addEventListener("blur", ()=>{caracteresDescripcion(descripcion)})
+precio.addEventListener("blur", ()=>{numerosPrecio(precio)})
 
 
 cargarInicial();
