@@ -22,7 +22,7 @@
     font-family: 'Poppins', sans-serif;
 }
 /* header */
-header{
+.headerNosotros{
     width: 100%;
     height: 600px;
     background-image: url(/img/pexels-olia-danilevich-4974912.jpg);   
@@ -316,9 +316,3 @@ text-align: justify;
 }
 /* pagina acerca de nosotros */
 /* pagina error 404 */
-.botonMenu{
-    background-color:#fbc827;
-}
-.divBotonMenu {
-background-color: #3e3e3e;
-}
