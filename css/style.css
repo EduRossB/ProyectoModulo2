@@ -1,4 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* Colores:
+#FBC827       AMARILLO
+#1C1C1C       NEGRO
+#3E3E3E       GRIS */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .logoEmpresa{
 height: 100px;
 border-radius: 10px;
+}
+
+.mainPrincipal{
+    background-image: url(/img/fondoGris.webp);
+}
+.mouseGamer{
+    height: 300px;
+    
+}
+.navbarPagPrincipal{
+    background: #FBC827 ;
+}
+
+.seccionGamer{
+  background-color:  #3E3E3E;
+}
+.cardsNuevosProductos{
+    width: 250px;
+    height: 300px;
+    border-radius: 14px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.cardsNuevosProductos:hover {
+   box-shadow: 0 0 30px;
+   transition: all 0.5s ease-out;
+   transform: rotateY(180deg);
+
+}
+.cardFormasDePago:hover{
+    box-shadow: 10px 5px 5px #3E3E3E;
+    transition: margin-left 4s ease-in-out 0s;
+}
+
+
+
+
+
+
+@media all and (min-width: 700px){
+    .imgSlider{
+        height: 450px;
+        object-fit: cover;
+    }
+}
+@media all and (min-width: 800px){
+    .imgSlider{
+        height: 600px;
+        object-fit: cover;
+    }
+}
+@media all and (min-width: 1000px){
+    .imgSlider{
+        height: 750px;
+        object-fit: cover;
+    }
 }
