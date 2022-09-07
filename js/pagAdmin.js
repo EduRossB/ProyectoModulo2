@@ -1,4 +1,5 @@
 import { Producto } from "./classProductos.js";
+import {caracteresDescripcion, caracteresProducto} from "./helpersAdmin.js";
 
 let codigo = document.querySelector("#codigo");
 let nombreProducto = document.querySelector("#nombreProducto");
@@ -15,6 +16,10 @@ let nuevoProducto = true;
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalProductos")
 );
+
+nombreProducto.addEventListener("blur", ()=>{caracteresProducto(nombreProducto)})
+descripcion.addEventListener("blur", ()=>{caracteresDescripcion(descripcion)})
+
 
 cargarInicial();
 

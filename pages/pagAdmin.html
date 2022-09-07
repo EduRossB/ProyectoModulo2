@@ -135,6 +135,7 @@
                   maxlength="65"
                   minlength="3"
                 />
+                <div class="invalid-feedback">Ingrese un nombre de producto</div>
               </div>
               <div class="mb-3">
                 <label for="descripcion">Descripción</label>
@@ -144,8 +145,9 @@
                   class="form-control inputFormulario"
                   placeholder="Ej: Monitor de 24` marca Samsung"
                   maxlength="200"
-                  minlength="2"
+                  minlength="5"
                 ></textarea>
+                <div class="invalid-feedback">Ingrese una descripción</div>
               </div>
               <div class="mb-3">
                 <label for="imagen">Imagen</label>
@@ -157,17 +159,19 @@
                   maxlength="200"
                   minlength="1"
                 />
+                <div class="invalid-feedback">Ingrese un link de imagen</div>
               </div>
               <div class="mb-3">
                 <label for="precio">Precio</label>
                 <input
                   id="precio"
-                  type="text"
+                  type="number"
                   class="form-control inputFormulario"
                   placeholder="xxxx"
                   maxlength="10"
                   minlength="2"
                 />
+                <div class="invalid-feedback">Precio requerido sin puntos ni simbolos</div>
               </div>
               <div class="mb-3">
                 <label for="categoria">Categoría</label>
