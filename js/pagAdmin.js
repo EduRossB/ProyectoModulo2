@@ -1,5 +1,10 @@
 import { Producto } from "./classProductos.js";
-import {caracteresDescripcion, caracteresProducto, linkImagenValidacion, numerosPrecio} from "./helpersAdmin.js";
+import {
+  caracteresDescripcion,
+  caracteresProducto,
+  linkImagenValidacion,
+  numerosPrecio,
+} from "./helpersAdmin.js";
 
 let codigo = document.querySelector("#codigo");
 let nombreProducto = document.querySelector("#nombreProducto");
@@ -17,11 +22,21 @@ const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalProductos")
 );
 
-nombreProducto.addEventListener("blur", ()=>{caracteresProducto(nombreProducto)})
-descripcion.addEventListener("blur", ()=>{caracteresDescripcion(descripcion)})
-imagen.addEventListener("blur", ()=>{linkImagenValidacion(imagen)})
-precio.addEventListener("blur", ()=>{numerosPrecio(precio)})
+btnAgregarProcucto.addEventListener("click", AgregarProducto);
+formProducto.addEventListener("submit", generarProductoNuevo);
 
+nombreProducto.addEventListener("blur", () => {
+  caracteresProducto(nombreProducto);
+});
+descripcion.addEventListener("blur", () => {
+  caracteresDescripcion(descripcion);
+});
+imagen.addEventListener("blur", () => {
+  linkImagenValidacion(imagen);
+});
+precio.addEventListener("blur", () => {
+  numerosPrecio(precio);
+});
 
 cargarInicial();
 
@@ -44,8 +59,6 @@ function limpiarFormulario() {
   formProducto.reset();
 }
 
-btnAgregarProcucto.addEventListener("click", AgregarProducto);
-
 function generarProductoNuevo(e) {
   e.preventDefault();
   if (nuevoProducto) {
@@ -63,11 +76,9 @@ function generarProductoNuevo(e) {
     limpiarFormulario();
     codigo.value = uuidv4();
   } else {
-    actualizarProducto()
+    actualizarProducto();
   }
 }
-
-formProducto.addEventListener("submit", generarProductoNuevo);
 
 function generarProductoEnLocalStorage() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
