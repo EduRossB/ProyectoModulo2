@@ -1,5 +1,5 @@
 
-import { cantidadCaracteres, validarContraseña, validarEmail } from "./helpers.js";
+import { cantidadCaracteres, validarContraseña, validarEmail } from "./helpersLogin.js";
 import {Usuario} from "./claseUsuario.js";
 
 
@@ -9,19 +9,21 @@ let iniciaSesionEmail = document.querySelector('#iniciaremail');
 let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
 
 let inicioFormulario = document.querySelector("#iniciaFormulario");
-inicioFormulario.addEventListener("submit", iniciarSesion);
+inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
 
 let nombreUsuario = "rolling@gmail.com";
 let iniciarClave = "Matias1234@";
 
 
-function iniciarSesion(e){
+function iniciarSesionAdmin(e){
     e.preventDefault();
 if (iniciaSesionEmail.value == nombreUsuario && iniciaSesionContraseña.value == iniciarClave){
     
 window.location="/pages/pagAdmin.html";
 }
 }
+
+
 
 // formulario registro (modal)
 let formulario = document.querySelector("#formularioEntero");
@@ -71,6 +73,8 @@ alert("debe completar todos los datos")
 function guardarUsuariosLocalStorage(){
     localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
 }
+
+
      
         
 
