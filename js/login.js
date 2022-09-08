@@ -5,25 +5,26 @@ import {Usuario} from "./claseUsuario.js";
 
 
 // formulario inicio sesion
-let iniciaSesionEmail = document.querySelector('#iniciaremail');
-let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
+let iniciaSesionEmail = document.querySelector('#iniciaremail').value;
+let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña').value;
 
 let inicioFormulario = document.querySelector("#iniciaFormulario");
 inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
 
-let nombreUsuario = "rolling@gmail.com";
-let iniciarClave = "Matias1234@";
+
+// Usuario y clave de admin
+let nombreUsuarioAdmin = "rolling@gmail.com";
+let iniciarClaveAdmin = "Matias1234@";
+
 
 
 function iniciarSesionAdmin(e){
     e.preventDefault();
-if (iniciaSesionEmail.value == nombreUsuario && iniciaSesionContraseña.value == iniciarClave){
+if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
     
 window.location="/pages/pagAdmin.html";
 }
 }
-
-
 
 // formulario registro (modal)
 let formulario = document.querySelector("#formularioEntero");
@@ -39,6 +40,7 @@ contraseñaIngresada.addEventListener("blur", ()=>{validarContraseña(contraseñ
 
 
 let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || []; 
+
 
 function crearUsuario(e){
     e.preventDefault();
@@ -69,14 +71,23 @@ alert("debe completar todos los datos")
 }
 
 }
-        
-function guardarUsuariosLocalStorage(){
-    localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
+
+inicioFormulario.addEventListener("submit", inicioSesionInvitado);
+
+console.log(listaUsuarios);
+
+function inicioSesionInvitado(){
+    const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
+    console.log({listaUsuarios})
+    const newElement = listaUsuarios.filter((element) => element.email === iniciaSesionEmail.value);
+    console.log({newElement})
+    
+    if (newElement.contraseña === iniciaSesionContraseña.value){
+       window.location = "/index.html";
+    } else {
+       alert("no entra")
+    }
+    console.log({iniciaSesionEmail})
 }
 
-
-     
-        
-
-
-
+console.log({iniciaSesionEmail})
