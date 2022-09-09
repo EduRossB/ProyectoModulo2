@@ -35,12 +35,7 @@ border-radius: 10px;
     object-fit: cover;
     border-radius: 14px;
 }
-.cardsNuevosProductos:hover {
-   box-shadow: 0 0 30px;
-   transition: all 0.5s ease-out;
-   transform: rotateY(180deg);
-   
-}
+
 .cardFormasDePago:hover{
     box-shadow: 10px 5px 5px #3E3E3E;
     transition: margin-left 4s ease-in-out 0s;
@@ -53,13 +48,13 @@ border-radius: 10px;
 }
 
 .title-collage{
-    font-family: 'Nerko One', cursive;
+    font-family: "poppins";
     padding: 1.2rem;
     font-size: 3rem;
 }
 
 .subtitle-collage{
-    font-family: 'Indie Flower', cursive;
+    font-family: 'poppins', cursive;
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -89,7 +84,7 @@ border-radius: 10px;
 
 .text-overlay {
     color: black;
-    font-size: 20px;
+    font-size: 12px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,7 +96,7 @@ border-radius: 10px;
 
 @media (min-width: 768px){
     .text-sm-img{
-        font-size: 16px;
+        font-size: 10px;
     }
 }
 
