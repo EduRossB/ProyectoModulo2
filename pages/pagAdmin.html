@@ -75,7 +75,7 @@
       </div>
       <div class="d-flex justify-content-center"></div>
       <div class="table-responsive">
-        <table class="table table-dark table-striped">
+        <table class="table table-dark table-striped table-sortable">
           <thead>
             <tr>
               <th scope="col">Código</th>
@@ -145,7 +145,7 @@
                   rows="4"
                   class="form-control inputFormulario"
                   placeholder="Ej: Monitor de 24` marca Samsung"
-                  maxlength="200"
+                  maxlength="300"
                   minlength="5"
                 ></textarea>
                 <div class="invalid-feedback">Ingrese una descripción</div>
@@ -176,16 +176,32 @@
               </div>
               <div class="mb-3">
                 <label for="categoria">Categoría</label>
-                <select id="categoria" required class="form-control inputFormulario text-light">
+                <select id="categoria" required class="form-control inputFormulario">
                   <option class="inputFormulario" value="">Selecione una opción</option>
                   <option class="inputFormulario" value="computacion">Computación</option>
                   <option class="inputFormulario" value="gaming">Gaming</option>
-                  <option class="inputFormulario" value="electrodomesticos">Electrodomesticos</option>
+                  <option class="inputFormulario" value="smartphone">Smartphones</option>
                   <option class="inputFormulario" value="tvmonitor">TV/Monitor</option>
                 </select>
               </div>
               <button class="btn btn-warning" type="submit">Enviar</button>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalInfo" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-warning ">
+          <div class="modal-header">
+            <h5 class="modal-title">Detalle de producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="contenedorInfoProducto"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

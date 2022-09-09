@@ -17,10 +17,12 @@ let btnAgregarProcucto = document.querySelector("#botonAgregarProducto");
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 let nuevoProducto = true;
+let contenedorInfoProducto = document.querySelector("#contenedorInfoProducto");
 
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalProductos")
 );
+const modalInfo = new bootstrap.Modal(document.querySelector("#modalInfo"));
 
 btnAgregarProcucto.addEventListener("click", AgregarProducto);
 formProducto.addEventListener("submit", generarProductoNuevo);
@@ -89,17 +91,21 @@ function crearObjetoEnHTML(Producto) {
   contenedorProductos.innerHTML += `
   <tr>
   <th scope="row">${Producto.codigo}</th>
-  <td>${Producto.nombreProducto}</td>
-  <td>${Producto.descripcion}</td>
-  <td>${Producto.imagen}</td>
-  <td>${Producto.precio}</td>
-  <td>${Producto.categoria}</td>
+  <td class="tdTabla">${Producto.nombreProducto}</td>
+  <td class="tdTabla">${Producto.descripcion}</td>
+  <td class="tdTabla">${Producto.imagen}</td>
+  <td class="tdTabla">${Producto.precio}</td>
+  <td class="tdTabla">${Producto.categoria}</td>
   <td>
     <button class="bg-dark mx-2">
       <i class="bi bi-trash text-danger" onclick="borrarProducto('${Producto.codigo}')"></i></button
     ><button class="bg-dark mx-2">
       <i class="bi bi-pencil-square text-warning" onclick="editarProducto('${Producto.codigo}')"></i>
     </button>
+    <button class="bg-dark mx-2">
+      <i class="bi bi-info-circle text-info" onclick="detalleProducto('${Producto.codigo}')"></i>
+    </button>
+    
   </td>
 </tr>
   `;
@@ -132,6 +138,21 @@ window.borrarProducto = function (codigo) {
       );
     }
   });
+};
+
+window.detalleProducto = function (codigoDetalle) {
+  let detalleBuscado = listaProductos.find(
+    (Producto) => Producto.codigo === codigoDetalle
+  );
+  modalInfo.show();
+  contenedorInfoProducto.innerHTML = `<div class="container py-5 fuenteMontserrat rounded text-center bg-dark text-warning">
+  <h4 class="display-5 fs-5 my-2">${detalleBuscado.nombreProducto}</h4>
+  <p class="fw-bold my-2 text-secondary">Código: ${detalleBuscado.codigo}</p>
+  <p class="my-2">${detalleBuscado.descripcion}</p>
+  <img class="my-2" width="100px" src="${detalleBuscado.imagen}" alt="alt">
+  <p class="my-2 fw-bold">Precio: $${detalleBuscado.precio}</p>
+  <p class="my-2">Categoría: ${detalleBuscado.categoria}</p>
+</div>`;
 };
 
 function actualizarTabla() {

@@ -8,7 +8,7 @@ export function caracteresProducto(input){
     }
 }
 export function caracteresDescripcion(input){
-    if(input.value.length >= 5 && input.value.length <=200){
+    if(input.value.length >= 5 && input.value.length <=300){
         input.className = 'form-control is-valid';
         return true;
     }else{
