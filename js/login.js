@@ -17,7 +17,7 @@ let nombreUsuarioAdmin = "rolling@gmail.com";
 let iniciarClaveAdmin = "Matias1234@";
 
 
-
+// inicio sesion admin
 function iniciarSesionAdmin(e){
     e.preventDefault();
 if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
@@ -76,18 +76,30 @@ inicioFormulario.addEventListener("submit", inicioSesionInvitado);
 
 console.log(listaUsuarios);
 
-function inicioSesionInvitado(){
-    const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
-    console.log({listaUsuarios})
-    const newElement = listaUsuarios.filter((element) => element.email === iniciaSesionEmail.value);
-    console.log({newElement})
-    
-    if (newElement.contraseña === iniciaSesionContraseña.value){
-       window.location = "/index.html";
-    } else {
-       alert("no entra")
-    }
-    console.log({iniciaSesionEmail})
-}
 
-console.log({iniciaSesionEmail})
+    let entryCount = 0
+    let entryLimit = 3
+    
+    
+    // Login with Attempts limit
+    function inicioSesionInvitado() {
+     
+    
+        let userFound = listaUsuarios.find( == iniciaSesionEmail.value );
+
+        if (userFound) {
+            window.location.href = "/index.html"
+        }
+        else {
+            alert('Contraseña o usuario invalido, intentelo nuevamente')
+            entryCount++;
+        } 
+        
+        if (entryCount >= entryLimit) {
+            alert('Pasaste el limite de intentos')
+            window.location.href = "/pages/pagError404.html"
+        }
+    }    
+         
+         
+    
