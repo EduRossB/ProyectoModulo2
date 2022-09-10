@@ -1,3 +1,18 @@
+// seccion productos del LocalStorage
+
+class Producto{
+constructor(codigo,nombreProducto,descripcion,imagen,precio,categoria){
+this.codigo = codigo
+        this.nombreProducto = nombreProducto
+        this.descripcion = descripcion
+        this.imagen = imagen
+        this.precio = precio
+        this.categoria = categoria
+}
+}
+
+// Seccon productos nuevos
+
 const productos = [
   {
     id: uuidv4(),
@@ -17,7 +32,7 @@ const productos = [
     id: uuidv4(),
     name: "Celular Motorola G51",
     img: "https://player8.org/wp-content/uploads/2022/03/moto-g51-890x606.jpg",
-    descripcion: "Procesador Snapdragon 480+, pantalla de  6,8 pulgadas, y un sistema Android 11",
+    descripcion: "Procesador Snapdragon 480+ y un sistema Android 11",
     new: true,
   }
 ];
