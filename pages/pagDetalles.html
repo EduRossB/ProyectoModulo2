@@ -17,52 +17,39 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg  navbarPagPrincipal">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <img src="../img/logo_y_nombre_con_fondo.png" alt="logo de la empresa" class="logoEmpresa w-25" >
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-regular fa-user"></i>
-                  Usuario
-                </a>
-                <ul class="dropdown-menu bg-secondary">
-                  <li><a class="dropdown-item text-warning" href="#">Tus compras</a></li>
-                  <li><a class="dropdown-item text-warning" href="#">Promociones para ti</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item text-warning" href="#">Cerrar Sesion</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/login.html">LogIn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/pagAdmin.html">Administracion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href = "#">
-                  Tus compras
-                  <i class="bi bi-cart3 fs-5"></i>
-                </a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar Productos" aria-label="Search">
-              <button class="btn btn-outline-dark" type="submit">
-                <!-- Este  boton debe permitir buscar un producto por su nombre o categoria -->
-                Buscar
-              </button>
+      <hr class="lineaHoriz" />
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-5">
+        <div class="container-fluid justify-content-evenly">
+          <a class="navbar-brand fuentNavBrand text-warning fw-bold" href="#"
+            ><img
+              class="w-50"
+              src="../img/logo_y_nombre_sin_fondo.png"
+              alt="logo"
+          /></a>
+          <div
+            class="d-flex justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <form>
+              <input
+                class="form-control me-2 colorgris text-light"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Buscador"
+              />
             </form>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a href="#"
+              ><i class="bi bi-person-circle text-light fs-5 ms-3"></i
+            ></a>
+            <a href="#"><i class="bi bi-cart4 text-light fs-5 ms-3"></i></a>
           </div>
         </div>
       </nav>
+      
     </header>
+      
     <main class="container mt-2 mb-5">
         <h1 class="display-1 text-center"> Rolling Market</h1>
         <hr />
