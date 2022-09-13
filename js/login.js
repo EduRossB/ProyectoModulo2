@@ -2,30 +2,6 @@
 import { cantidadCaracteres, validarContraseña, validarEmail } from "./helpersLogin.js";
 import {Usuario} from "./claseUsuario.js";
 
-
-
-// formulario inicio sesion
-let iniciaSesionEmail = document.querySelector('#iniciaremail').value;
-let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña').value;
-
-let inicioFormulario = document.querySelector("#iniciaFormulario");
-inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
-
-
-// Usuario y clave de admin
-let nombreUsuarioAdmin = "rolling@gmail.com";
-let iniciarClaveAdmin = "Matias1234@";
-
-
-// inicio sesion admin
-function iniciarSesionAdmin(e){
-    e.preventDefault();
-if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
-    
-window.location="/pages/pagAdmin.html";
-}
-}
-
 // formulario registro (modal)
 let formulario = document.querySelector("#formularioEntero");
 let nombreIngresado = document.querySelector('#nombreCompleto');
@@ -72,34 +48,37 @@ alert("debe completar todos los datos")
 
 }
 
-inicioFormulario.addEventListener("submit", inicioSesionInvitado);
-
 console.log(listaUsuarios);
 
+// formulario inicio sesion
+let iniciaSesionEmail = document.querySelector('#iniciaremail');
+let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
+let inicioFormulario = document.querySelector("#iniciaFormulario");
+inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
+inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
-    let entryCount = 0
-    let entryLimit = 3
-    
-    
-    // Login with Attempts limit
-    function inicioSesionInvitado() {
-     
-    
-        let userFound = listaUsuarios.find( == iniciaSesionEmail.value );
 
-        if (userFound) {
-            window.location.href = "/index.html"
-        }
-        else {
-            alert('Contraseña o usuario invalido, intentelo nuevamente')
-            entryCount++;
-        } 
-        
-        if (entryCount >= entryLimit) {
-            alert('Pasaste el limite de intentos')
-            window.location.href = "/pages/pagError404.html"
-        }
-    }    
-         
-         
-    
+// Usuario y clave de admin
+let nombreUsuarioAdmin = "rolling@gmail.com";
+let iniciarClaveAdmin = "Rolling@123456";
+
+let nuevoNavBar = document.querySelector("#listaNavBarAdmin"); 
+
+// inicio sesion admin
+function iniciarSesionAdmin(e){
+    e.preventDefault();
+if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
+  window.location="/pages/pagAdmin.html";
+
+}
+}
+
+function iniciaSesionInvitado(e){
+    e.preventDefault();
+   for(let i = 0; i < listaUsuarios.length; i++){
+    if(iniciaSesionEmail.value == listaUsuarios[i].email && iniciaSesionContraseña.value == listaUsuarios[i].contraseña){
+        window.location="/index.html";
+        i = 50;
+    }
+}
+}
