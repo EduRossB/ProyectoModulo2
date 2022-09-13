@@ -25,11 +25,13 @@
 .headerNosotros{
     width: 100%;
     height: 600px;
-    background-image: url(/img/pexels-olia-danilevich-4974912.jpg);   
+    background-image: url(/img/pexels-olia-danilevich-4974912.jpg);  
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    
 }
+
 header .textos-header{
     display: flex;
     height: 430px;
@@ -41,15 +43,16 @@ header .textos-header{
 }
 
 .textos-header h1{
-    font-size: 50px;
+    font-size: 70px;
     color: #fff;
     font-family: 'Poppins', sans-serif;
 }
 .textos-header h2{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 300;
     color: #fbc827; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+   
 }
 .wave{
     position: absolute;
