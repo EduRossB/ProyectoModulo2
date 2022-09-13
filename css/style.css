@@ -29,21 +29,33 @@ border-radius: 10px;
   background-color:  #3E3E3E;
 }
 .cardsNuevosProductos{
-    width: 300px;
-    height: 350px;
-    border-radius: 14px;
+  width: 250px;
+  height: 350px;
+  border-radius: 14px;
+}
+.imagenCard{
+width: 100%;
+height: 150px;
+border-radius: 14px, 0px, 14px, 0px;
+}
+@supports (object-fit: cover){
+  .imagenCard img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    padding: 0px 30px;
-   
+    object-position: center center;
+  }
+
+}
+.infoProducto{
+  padding: 5px;
 }
 
 .cardFormasDePago:hover{
     box-shadow: 10px 5px 5px #3E3E3E;
     transition: margin-left 4s ease-in-out 0s;
 }
-.botonCarrito{
-  
-}
+
 
 /* sector gamer */
 .container-collage {

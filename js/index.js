@@ -7,11 +7,13 @@ const displayProducts = (productos, section) => {
   const displayProductos = productos.map(
     (producto) =>
       `<div class="row col-lg-4 justify-content-center">
-        <div class="card cardsNuevosProductos bg-secondary  mt-3">
+        <div class="card cardsNuevosProductos mt-3 p-0">
+        <div class="imagenCard">
           <img src=${producto.imagen} class="card-img-top m-0" alt=${
         producto.nombreProducto
-      }>
-          <div class=>
+      }> 
+      </div>
+          <div class= "infoProducto bg-secondary">
             <h5 class="card-title text-light">${producto.nombreProducto}
             ${
               producto.new
@@ -19,10 +21,11 @@ const displayProducts = (productos, section) => {
                 : ""
             }
             </h5>
-            <p class="card-text text-light">${producto.descripcion}</p>
+            <p class="card-text text-light">${producto.descripcion.substring(0, 30)}...
+            <button type="button" class="btn btn-link bg-transparent outline-none" id="verMas">Ver mas</button>
+            </p>
             <p class="card-text text-light">${producto.precio}</p>
             <button type="button" class="btn btn-secondary" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button>
-
           </div>
         </div>
       </div>`
