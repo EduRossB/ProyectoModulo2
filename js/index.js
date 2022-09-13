@@ -20,9 +20,7 @@ const displayProducts = (productos, section) => {
             }
             </h5>
             <p class="card-text text-light">${producto.descripcion}</p>
-            <p class="card-text text-light">${producto.precio}</p>
-            <button type="button" class="btn btn-secondary" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button>
-
+            <p class="card-text text-light">${producto.precio}</p>            
           </div>
         </div>
       </div>`
@@ -45,7 +43,8 @@ const productosNuevos = [
     descripcion:
       "Nuevo Celular de la Gama Apple, el procesador mas veloz de todos y una camara con un sensor de 48 Megapíxeles",
     new: true,
-    precio: "Precio: $640.000"
+    precio: "Precio: $640.000",
+    id: 1
   },
   {
     codigo: uuidv4(),
@@ -54,7 +53,8 @@ const productosNuevos = [
     descripcion:
       "Procesamiento Intel® Core™ i7, Windows 10 y pantalla 14 pulgadas FHD (1920 x 1080)",
     new: true,
-    precio: "Precio: $849.999"
+    precio: "Precio: $849.999",
+    id : 2
   },
   {
     codigo: uuidv4(),
@@ -62,7 +62,8 @@ const productosNuevos = [
     imagen: "https://player8.org/wp-content/uploads/2022/03/moto-g51-890x606.jpg",
     descripcion: "Procesador Snapdragon 480+ y un sistema Android 11",
     new: true,
-    precio: "Precio: $470.999"
+    precio: "Precio: $470.999",
+    id : 3
   },
 ];
 
