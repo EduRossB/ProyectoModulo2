@@ -5,11 +5,12 @@ import {Usuario} from "./claseUsuario.js";
 
 
 // formulario inicio sesion
-let iniciaSesionEmail = document.querySelector('#iniciaremail').value;
-let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña').value;
+let iniciaSesionEmail = document.querySelector('#iniciaremail');
+let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
 
 let inicioFormulario = document.querySelector("#iniciaFormulario");
 inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
+
 
 
 // Usuario y clave de admin
@@ -21,8 +22,8 @@ let iniciarClaveAdmin = "Matias1234@";
 function iniciarSesionAdmin(e){
     e.preventDefault();
 if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
-    
-window.location="/pages/pagAdmin.html";
+  window.location="/pages/pagAdmin.html";
+
 }
 }
 
@@ -39,8 +40,10 @@ mailIngresado.addEventListener("blur", ()=> {validarEmail(mailIngresado)});
 contraseñaIngresada.addEventListener("blur", ()=>{validarContraseña(contraseñaIngresada)});
 
 
-let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || []; 
-
+function guardarUsuariosLocalStorage(){
+    localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios))
+}
+let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
 
 function crearUsuario(e){
     e.preventDefault();
@@ -72,34 +75,21 @@ alert("debe completar todos los datos")
 
 }
 
-inicioFormulario.addEventListener("submit", inicioSesionInvitado);
 
-console.log(listaUsuarios);
+inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
+console.log(listaUsuarios)
 
-    let entryCount = 0
-    let entryLimit = 3
-    
-    
-    // Login with Attempts limit
-    function inicioSesionInvitado() {
-     
-    
-        let userFound = listaUsuarios.find( == iniciaSesionEmail.value );
+function iniciaSesionInvitado(e){
+    e.preventDefault();
+   for(let i = 0; i < listaUsuarios.length; i++){
+    if(iniciaSesionEmail.value == listaUsuarios[i].email && iniciaSesionContraseña.value == listaUsuarios[i].contraseña){
+        window.location="/index.html";
+        i = 50;
+    }
+}
+}
 
-        if (userFound) {
-            window.location.href = "/index.html"
-        }
-        else {
-            alert('Contraseña o usuario invalido, intentelo nuevamente')
-            entryCount++;
-        } 
-        
-        if (entryCount >= entryLimit) {
-            alert('Pasaste el limite de intentos')
-            window.location.href = "/pages/pagError404.html"
-        }
-    }    
          
          
     
