@@ -17,7 +17,7 @@ const displayProducts = (productos, section) => {
             <h5 class="card-title text-light">${producto.nombreProducto}
             ${
               producto.new
-                ? '<span class="badge rounded-pill text-bg-warning ">Nuevo</span>'
+                ? '<span class="badge rounded-pill text-bg-primary ">Nuevo</span>'
                 : ""
             }
             </h5>
@@ -25,7 +25,7 @@ const displayProducts = (productos, section) => {
             <button type="button" class="btn btn-link bg-transparent outline-none" id="verMas">Ver mas</button>
             </p>
             <p class="card-text text-light">${producto.precio}</p>
-            <button type="button" class="btn btn-secondary" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button>
+            <button type="button" class="btn btn-warning" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button>
           </div>
         </div>
       </div>`
