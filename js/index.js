@@ -1,20 +1,12 @@
-// seccion productos del LocalStorage
-export class Producto{
-  constructor(codigo, nombreProducto, descripcion, imagen, precio, categoria){
-      this.codigo = codigo
-      this.nombreProducto = nombreProducto
-      this.descripcion = descripcion
-      this.imagen = imagen
-      this.precio = precio
-      this.categoria = categoria
+ import {producto} from './classProductos'
 
-  }
-}
+
+// seccion productos del LocalStorage
 
 
 // Seccion productos nuevos
 
-const productos = [
+const productosNuevos = [
   {
     id: uuidv4(),
     name: "iPhone 14 Pro",
@@ -40,51 +32,13 @@ const productos = [
   },
 ];
 
-function createProduct() {
-  //Traer los productos de local storage
-  const products = JSON.parse(localStorage.getItem('producto')) || prodcutosLocalStorage;
-  const cardsProducts = [];
-  
-  for (let i = 0; i < products.length; i++) {
-      const producto = products[i];
-      const card = `
-      <div class="card">
-              <div class="card-inner itemProduct">
-                  <div class="card-front">
-                      <img class="imgProduct" src="${producto.imagen}"
-                          alt="">
-                          <p class="d-none idProduct">${producto.codigo}</p>
-                          <input id="inputQuantity${producto.categoria}" class="input-cantidad d-none" type="number" value="1"></td>
-                  </div>
-                  <div class="card-back">
-                      <h3 class="titleProduct">${producto.nombre}</h3>
-                      <p>
-                          ${Producto.descripcion}
-                      </p>
-                          <div class="btn-group-m text-center fixed-bottom" role="group" aria-label="Basic example">
-                              <button type="button" class="btn btn-dark btn-price priceProduct" disabled>$${Producto.precio}</button>
-                              <button type="button" class="btn btn-secondary addToCart">Comprar<i class="fas fa-shopping-cart"></i></button>
-                          </div>
-                  </div>
-              </div>
-          </div>
-      `
-      
-      cardsProducts.unshift(card);
-      
-  }
-  spaceCardsAdd.innerHTML = cardsProducts.join('');
-  const productsCart = JSON.parse(localStorage.getItem('productsCart')) || [];
-  showProducts(productsCart);
-}
-createProduct();
 
 //productos nuevos 
 const sectionProducts = document.getElementById("sectionProducts");
 
 
 const displayProducts = () => {
-  const displayProductos = productos.map(
+  const displayProductos = productosNuevos.map(
     (producto) =>
       `<div class="row col-lg-4 justify-content-center">
         <div class="card cardsNuevosProductos bg-secondary  mt-3">
