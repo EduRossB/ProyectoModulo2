@@ -20,8 +20,7 @@ const displayProducts = (productos, section) => {
             }
             </h5>
             <p class="card-text text-light">${producto.descripcion}</p>
-            <p class="card-text text-light">${producto.precio}</p>
-            <button type="button" class="btn btn-secondary" id="agregar${producto.id}">Comprar<i class="fas fa-shopping-cart"></i></button>
+            <p class="card-text text-light">${producto.precio}</p>            
           </div>
         </div>
       </div>`
