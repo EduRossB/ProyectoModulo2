@@ -33,12 +33,16 @@ border-radius: 10px;
     height: 350px;
     border-radius: 14px;
     object-fit: cover;
+    padding: 0px 30px;
    
 }
 
 .cardFormasDePago:hover{
     box-shadow: 10px 5px 5px #3E3E3E;
     transition: margin-left 4s ease-in-out 0s;
+}
+.botonCarrito{
+  
 }
 
 /* sector gamer */
