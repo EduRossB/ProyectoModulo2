@@ -1,0 +1,99 @@
+/* Fuente Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Orbitron&display=swap');
+
+/* Fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.monserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fuente colores principales */
+.colorAmarilloPrincipal{
+  color: #fbc827;
+}
+
+.colorNegroOscuroPrincipal{
+    color: #1C1C1C;
+}
+
+.colorGrisOscuroPrincipal{
+    color: #3e3e3e;
+}
+
+/* Fondos colores principales */
+
+  .fondoAmarilloPrincipal{
+    background-color: #fbc827;
+  }
+
+  .fondoNegroOscuroPrincipal{
+    background-color: #1C1C1C;
+}
+
+  .colorGrisOscuroPrincipal{
+    background-color: #3e3e3e;
+}
+/* Estilos */
+
+.formulario{
+
+}
+
+.titulo{
+    font-size: 1cm;
+}
+
+.subtitulos{
+    font-size: 0.8cm;
+}
+
+.centrarElementos{
+    justify-content: center;
+}
+
+.width{
+    width: 100%;
+}
+
+.botonAmarillo{
+    background-color: #fbc827;
+    font-weight: bold;
+}
+
+.direccionColumna{
+    justify-content: flex-end;
+}
+
+.cajaInicioSesion{
+    background-color: #3e3e3e;
+    border-radius: 0.5cm;
+}
+
+.botonIniciarSesion{
+    background: #fbc827;
+    color: #1C1C1C;
+    padding: 15px;
+}
+
+.input{
+    height: 50px;
+}
+
+.cajaNewsletter{
+   justify-content: space-around;
+    
+}
+
+.botonCrearCuenta{
+    background: #1C1C1C;
+    color: white;
+    padding: 15px;
+}
+
+
+
