@@ -2,6 +2,31 @@
 import { cantidadCaracteres, validarContraseña, validarEmail } from "./helpersLogin.js";
 import {Usuario} from "./claseUsuario.js";
 
+
+
+// formulario inicio sesion
+let iniciaSesionEmail = document.querySelector('#iniciaremail');
+let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
+
+let inicioFormulario = document.querySelector("#iniciaFormulario");
+inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
+
+
+
+// Usuario y clave de admin
+let nombreUsuarioAdmin = "rolling@gmail.com";
+let iniciarClaveAdmin = "Matias1234@";
+
+
+// inicio sesion admin
+function iniciarSesionAdmin(e){
+    e.preventDefault();
+if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
+  window.location="/pages/pagAdmin.html";
+
+}
+}
+
 // formulario registro (modal)
 let formulario = document.querySelector("#formularioEntero");
 let nombreIngresado = document.querySelector('#nombreCompleto');
@@ -15,8 +40,10 @@ mailIngresado.addEventListener("blur", ()=> {validarEmail(mailIngresado)});
 contraseñaIngresada.addEventListener("blur", ()=>{validarContraseña(contraseñaIngresada)});
 
 
-let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || []; 
-
+function guardarUsuariosLocalStorage(){
+    localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios))
+}
+let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
 
 function crearUsuario(e){
     e.preventDefault();
@@ -48,30 +75,10 @@ alert("debe completar todos los datos")
 
 }
 
-console.log(listaUsuarios);
 
-// formulario inicio sesion
-let iniciaSesionEmail = document.querySelector('#iniciaremail');
-let iniciaSesionContraseña = document.querySelector('#iniciarcontraseña');
-let inicioFormulario = document.querySelector("#iniciaFormulario");
-inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
 inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
-
-// Usuario y clave de admin
-let nombreUsuarioAdmin = "rolling@gmail.com";
-let iniciarClaveAdmin = "Rolling@123456";
-
-let nuevoNavBar = document.querySelector("#listaNavBarAdmin"); 
-
-// inicio sesion admin
-function iniciarSesionAdmin(e){
-    e.preventDefault();
-if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
-  window.location="/pages/pagAdmin.html";
-
-}
-}
+console.log(listaUsuarios)
 
 function iniciaSesionInvitado(e){
     e.preventDefault();
@@ -82,3 +89,7 @@ function iniciaSesionInvitado(e){
     }
 }
 }
+
+         
+         
+    
