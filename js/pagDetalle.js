@@ -61,7 +61,7 @@ contenedorDetalle.innerHTML = `<article class="row separarArticle">
   ${listaProductos[1].descripcion}
   </p>
   <article>
-    <a href="#" class="btn colorAmarillo text-black">AGREGAR A CARRITO</a>
+    <a href="/pages/pagError404.html" class="btn colorAmarillo text-black">AGREGAR A CARRITO</a>
     <hr>
   </article>
   <br>

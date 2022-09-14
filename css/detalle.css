@@ -19,6 +19,10 @@ body {
   height: 300px;
 }
 
+.bgDetalle{
+  background-image: url(/img/fondoBODY);
+}
+
 .lineaHoriz {
   border: none;
   height: 20px;
