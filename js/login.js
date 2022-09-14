@@ -15,7 +15,7 @@ inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
 
 // Usuario y clave de admin
 let nombreUsuarioAdmin = "rolling@gmail.com";
-let iniciarClaveAdmin = "Matias1234@";
+let iniciarClaveAdmin = "Rolling123456@";
 
 
 // inicio sesion admin
