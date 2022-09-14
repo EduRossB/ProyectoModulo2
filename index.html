@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
     <script src="https://kit.fontawesome.com/d08f4ae6a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/carrito.css">
     <title>RollingMarket</title>
   </head>
   <body>
@@ -35,48 +36,49 @@
               Usuario
             </a>
             <ul class="dropdown-menu bg-secondary">
-              <li><a class="dropdown-item text-warning" href="#">Tus compras</a></li>
-              <li><a class="dropdown-item text-warning" href="#">Promociones para ti</a></li>
+              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Tus compras</a></li>
+              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Promociones para ti</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-warning" href="#">Cerrar Sesion</a></li>
+              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Cerrar Sesion</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/login.html">LogIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href = "#">
-              Tus compras
-              <i class="bi bi-cart3 fs-5"></i>
-            </a>
+            <a class="nav-link" href="/pages/pagDetalles.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <button id="boton-carrito"><i class="fas fa-shopping-cart"></tr></i><span id="contadorCarrito">0</span></button>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input id="botonBusqueda" class="form-control me-2" type="text" placeholder="Buscar Productos" aria-label="Search">
-          <button id="boton" class="btn btn-outline-dark" type="button">
+        <form id="searchForm" class="d-flex" role="search">
+          <input id="searchProductInput" class="form-control me-2" type="text" placeholder="Buscar Productos" aria-label="Search">
+          <button id="boton" class="btn btn-outline-dark" type="submit">
             <!-- Este  boton debe permitir buscar un producto por su nombre o categoria -->
             Buscar
           </button>
         </form>
+        <div id="productSearch" class="alert alert-info d-none" role="alert">
+          ¡Producto encontrado!
+      </div>
       </div>
     </div>
   </nav>
- <ul id="resultado">
-  <li></li>
- </ul>
+ 
 
 <main class="mainPrincipal">
 <section>
   <div id="carouselPrincipalProductos" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000" >
-        <img src="/img/Celulares2.webp" class="d-block w-100 imgSlider img-fluid" alt="..." >
+        <img src="https://images.pexels.com/photos/821222/pexels-photo-821222.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100 imgSlider img-fluid" alt="compra aqui" >
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/impresora.png" class="d-block w-100 imgSlider img-fluid" alt="...">
+        <img src="https://images.pexels.com/photos/1113804/pexels-photo-1113804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100 imgSlider img-fluid" alt="celular, auriculares y computadora">
       </div>
       <div class="carousel-item">
-        <img src="/img/televisor2.jpg" class="d-block w-100 imgSlider img-fluid" alt="...">
+        <img src="https://images.pexels.com/photos/5956083/pexels-photo-5956083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100 imgSlider img-fluid" alt="aplicaciones">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrincipalProductos" data-bs-slide="prev">
@@ -97,7 +99,7 @@
         <div class="card-body">
           <h5 class="card-title text-light text-center">Tarjetas de credito</h5>
           <p class="card-text text-light">Computadoras en 12 y 18 cuotas <br> sin interes</p>
-          <a href="#" class="btn btn-warning">Comprar</a>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
         </div>
       </div>
     </div>
@@ -106,7 +108,7 @@
         <div class="card-body">
           <h5 class="card-title text-light text-center">Tarjetas de Debito</h5>
           <p class="card-text text-light">Descuentos de hasta el 25% con Visa y MasterCard</p>
-          <a href="#" class="btn btn-warning">Comprar</a>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
         </div>
       </div>
     </div>
@@ -115,7 +117,7 @@
         <div class="card-body">
           <h5 class="card-title text-light text-center">Efectivo</h5>
           <p class="card-text text-light">Descuentos de hasta 40% con pagos en Efectivo en Celulares</p>
-          <a href="#" class="btn btn-warning">Comprar</a>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
         </div>
       </div>
     </div>
@@ -124,7 +126,7 @@
 
 <section>
   <h1 class="fs-1 text-center my-5 text-dark">Productos pagina Administracion</h1>
-
+  <div id="productosLocalStorage" class="row row-cols-1 row-cols-md-2 g-4 m-2">
 </section>
   
 <section>
@@ -136,6 +138,21 @@
 </section>
 
 <aside>
+  <!-- seccion carrito -->
+   <section id="contenedor-productos" class="body-compus">
+    
+  </section>
+  <!-- seccion modal carrito -->
+<div class="modal-contenedor">
+  <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+  </div>
+</div>
 
   <!--Collage informativo-->
   <div id="collage" class="container-fluid my-5">
@@ -150,7 +167,7 @@
             <div class="container-collage">
                 <img class="img-collage"
                     src="https://portalvidalivre.com/uploads/content/image/71692/Design_sem_nome__6___1_.jpg"
-                    alt="">
+                    alt="Teclado Gamer">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       El teclado HyperX permite que puedas disfrutar de horas ilimitadas!
@@ -160,7 +177,7 @@
             <div class="container-collage mt-3">
                 <img class="img-collage"
                     src="https://e.rpp-noticias.io/xlarge/2019/11/18/8654301231jpg.jpg"
-                    alt="">
+                    alt="teclado Gamer inteligente">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       Disfrutá de tus partidas en otro nivel con Redragon! Teclado Inteligente!
@@ -172,7 +189,7 @@
             <div class="container-collage my-3">
                 <img class="img-collage"
                     src="https://www.tecnocomphn.com/storage/app/uploads/public/5f7/371/279/5f73712799388998381928.jpeg"
-                    alt="">
+                    alt="Mouse Gamer 1">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla❗❗
@@ -182,7 +199,7 @@
             <div class="container-collage">
                 <img class="img-collage"
                     src="https://www.qloud.ar/SITES/IMG/joy-div-computers-09-2021/236_10-03-2022-01-03-46-mouse-idon4.png"
-                    alt="">
+                    alt="Mouse Gamer 2">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       Con sus 7 botones podrás tener mayor control e independencia para ejecutar❗❗
@@ -192,7 +209,7 @@
             <div class="container-collage my-3">
                 <img class="img-collage"
                     src="https://mla-s1-p.mlstatic.com/865935-MLA42774986878_072020-F.jpg"
-                    alt="">
+                    alt="Mouse Gamer 3">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       La funcionalidad al alcance de tu mano
@@ -205,7 +222,7 @@
             <div class="container-collage">
                 <img class="img-collage"
                     src="https://i.blogs.es/25be06/auricularesjugonesap/840_560.jpg"
-                    alt="">
+                    alt="Auriculares Gamer">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas🔥.
@@ -215,7 +232,7 @@
             <div class="container-collage mt-3">
                 <img class="img-collage"
                     src="https://gamageek.com/wp-content/uploads/2021/01/Mejores-Cascos-Gaming-por-100-a-200-euros-Logitech-G935-500x454.jpg"
-                    alt="">
+                    alt="Auriculares Gamer">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                       Su batería de larga duración te dará horas interminables de sonidos envolventes 🔥en tus partidas. Sus orejeras son sinónimo de comodidad
@@ -227,13 +244,13 @@
             <div class="container-collage img-size">
                 <img class="img-collage"
                     src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="">
+                    alt="Yoistick Nintendo">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img"> Y si volvemos a los de antes? La mejor Nintendo la podes encontrar aqui al mejor precio 🎉👏!</p>
                 </div>
             </div>
             <div class="container-collage mt-3 img-size">
-                <img class="img-collage" src="https://images.pexels.com/photos/6499182/pexels-photo-6499182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img class="img-collage" src="https://images.pexels.com/photos/6499182/pexels-photo-6499182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Moto realidad virtual">
                 <div class="overlay">
                     <p class="text-overlay text-sm-img">
                         En nuestra Pagina te desafiamos a que vengas a visitarnos y probar nuestra nueva Motocicleta de alta Gama de Reliada Virtual! tenemos lo ultimo, te lo dijimos!🔥🔥🔥🔥🔥
@@ -250,21 +267,21 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active bg-warning text-light " href="#">Teclados</a>
+          <a class="nav-link active bg-warning text-light " href="/pages/pagError404.html">Teclados</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Auriculares</a>
+          <a class="nav-link text-light" href="/pages/pagError404.html">Auriculares</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light">Accesorios</a>
+          <a class="nav-link text-light" href ="/pages/pagError404.html">Accesorios</a>
         </li>
       </ul>
     </div>
     <div class="card-body">
       <h5 class="card-title fs-1 text-light">Seccion Gamer</h5>
       <p class="card-text text-light">En esta seccion encontrarás todos los elementos que necesitas para lograr el mayor Rendimiento y Confort en tus Juegos</p>
-      <img src="/img/tecladoGamer.webp" class="card-img-top mouseGamer img-fluid" alt="...">
-      <a href="#" class="btn btn-warning mt-3">Ingresar a la Seccion</a>
+      <img src="/img/tecladoGamer.webp" class="card-img-top mouseGamer img-fluid" alt="teclado Gamer">
+      <a href="./pages/pagError404.html" class="btn btn-warning mt-3">Ingresar a la Seccion</a>
     </div>
   </div>
 </section>
@@ -280,34 +297,34 @@
         </div>
 
         <div class="col-12 col-md-2 col-lg-2 mt-3">
-          <h3 class="text-light fs-5 mt-3bebasNeue mt-3 bebasNeue ">Compañia</h3>
+          <h3 class="text-light fs-5 mt-3  mt-3 ">Compañia</h3>
           <a class="text-decoration-none text-secondary" href="pages/pagNosotros.html"
             >Nosotros.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/"
+          <a class="text-decoration-none text-secondary " href="pages/pagError404.html"
             >Contacto.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/" 
+          <a class="text-decoration-none text-secondary " href="pages/pagError404.html" 
             >Privacidad.</a
           >
           <br />
         </div>
 
         <div class="col-12 col-md-3 col-lg-3 mt-3">
-          <h3 class="text-light fs-5 mt-3 bebasNeue">Politica de privacidad</h3>
-          <a class="text-decoration-none text-secondary" href="pages/" 
+          <h3 class="text-light fs-5 mt-3">Politica de privacidad</h3>
+          <a class="text-decoration-none text-secondary" href="pages/pagError404.html" 
             >Terminos de usos.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/" 
+          <a class="text-decoration-none text-secondary " href="pages/pagError404.html" 
             >Informacion corporativa.</a
           >
           <br />
         </div>
         <div class="col-12 col-md-3 col-lg-3 mt-3">
-          <h3 class="text-light fs-5 mt-3 bebasNeue">Redes Sociales
+          <h3 class="text-light fs-5 mt-3">Redes Sociales
             <i class="bi bi-facebook"></i>
             <i class="bi bi-twitter"></i>
             <i class="bi bi-instagram"></i>
@@ -320,7 +337,12 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous">
-  <script src="/js/index.js" type="module"></script></script>
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="/js/index.js" type="module"></script>
+    <script src="/js/stock.js"></script>
+    <script src="/js/modalCarrito.js"></script>
+    <script src="/js/carrito.js"></script>
   </body>
 </html>

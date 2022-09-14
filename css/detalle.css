@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap");
+
+/* Colores:
+#FBC827       AMARILLO
+#1C1C1C       NEGRO
+#3E3E3E       GRIS */
+body {
+  font-family: "Poppins", sans-serif;
+}
+.logoEmpresa {
+  height: 100px;
+  border-radius: 10px;
+}
+.mainPrincipal {
+  background-image: url(/img/fondoGris.webp);
+}
+.mouseGamer {
+  height: 300px;
+}
+
+.lineaHoriz {
+  border: none;
+  height: 20px;
+  color: #fbc827;
+  background-color: #fbc827;
+  margin: 0px;
+  opacity: 100%;
+}
+
+.fuentNavBrand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.fuenteMontserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.colorgris {
+  background-color: #3e3e3e;
+}
+
+.colorAmarillo {
+  background-color: #fbc827;
+}
+
+.separarArticle {
+  padding: 30px;
+  
+}
+
+.colorNegro {
+    background-color: #1C1C1C;
+  }

@@ -1,0 +1,75 @@
+/* ADMINISTRACION */
+
+.lineaHoriz {
+    border: none;
+    height: 20px;
+    color: #fbc827;
+    background-color: #fbc827;
+    margin: 0px;
+    opacity: 100%;
+  }
+  
+  .fuentNavBrand {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+  }
+  
+  .fuenteMontserrat{
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .colorgris {
+    background-color: #3e3e3e;
+  }
+  
+  .botonagregar {
+    background-color: #3e3e3e;
+    border: #fbc827 3px solid;
+    color: #fbc827;
+    padding: 20px;
+  }
+  
+  .cardsProductos {
+    border: 0px;
+  }
+  
+  .card-footer {
+    border: 0px;
+    background-color: white;
+  }
+  
+  .precioCard {
+    color: #3e3e3e;
+    border-top: #fbc827 2px solid;
+    border-bottom: #fbc827 2px solid;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px;
+    margin: 5px 10px;
+  }
+  
+  .inputFormulario {
+    background-color: #3e3e3e;
+    color: white;
+  }
+  
+  .inputFormulario::placeholder {
+    color: white;
+  }
+  
+  .footerAdministracion {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  .tdTabla{
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 0;
+  }
