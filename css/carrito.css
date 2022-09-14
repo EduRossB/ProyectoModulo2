@@ -77,6 +77,8 @@ p {
 }
 .boton-agregar:hover {
     cursor: pointer;
+    background-color: white;
+    color: #3E3E3E;
 }
 .boton-agregar:focus {
     outline: none;
