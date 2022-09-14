@@ -1,4 +1,3 @@
-
 const contenedorProductos = document.getElementById('contenedor-productos')
 
 //TERCER PASO

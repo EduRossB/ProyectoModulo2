@@ -64,7 +64,7 @@ const displayProducts = (productos) => {
 
           </div>
           </div>
-          <div class="card-footer d-flex justify-content-center bg-dark">            <button type="button" class="btn boton-agregar" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button></div>
+          <div class="card-footer d-flex justify-content-center bg-dark"> <a href="../pages/pagDetalles.html"><button type="button" class="btn boton-agregar" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button></a></div>
         </div>
       </div>
       `

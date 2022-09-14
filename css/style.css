@@ -7,7 +7,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-image: url(/img/fondoBODY);
 }
+
 
 .logoEmpresa{
 height: 100px;
@@ -140,3 +142,13 @@ border-radius: 10px;
     }
 }
 
+/* CARRUSEL INDEX */
+
+.carousel-item img{
+    height: 350px;
+    object-fit: cover;
+}
+
+.subtitulo{
+    color: #FBC827;
+}
