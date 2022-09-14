@@ -4,6 +4,7 @@ import {
   caracteresProducto,
   linkImagenValidacion,
   numerosPrecio,
+  numerosStock
 } from "./helpersAdmin.js";
 
 let codigo = document.querySelector("#codigo");
@@ -11,6 +12,7 @@ let nombreProducto = document.querySelector("#nombreProducto");
 let descripcion = document.querySelector("#descripcion");
 let imagen = document.querySelector("#imagen");
 let precio = document.querySelector("#precio");
+let stock = document.querySelector("#stock");
 let categoria = document.querySelector("#categoria");
 let formProducto = document.querySelector("#formProducto");
 let btnAgregarProcucto = document.querySelector("#botonAgregarProducto");
@@ -38,6 +40,9 @@ imagen.addEventListener("blur", () => {
 });
 precio.addEventListener("blur", () => {
   numerosPrecio(precio);
+});
+stock.addEventListener("blur", () => {
+  numerosStock(stock);
 });
 
 cargarInicial();
@@ -70,6 +75,7 @@ function generarProductoNuevo(e) {
       descripcion.value,
       imagen.value,
       precio.value,
+      stock.value,
       categoria.value
     );
     listaProductos.push(nuevoProducto);
@@ -151,6 +157,7 @@ window.detalleProducto = function (codigoDetalle) {
   <p class="my-2">${detalleBuscado.descripcion}</p>
   <img class="my-2" width="100px" src="${detalleBuscado.imagen}" alt="alt">
   <p class="my-2 fw-bold">Precio: $${detalleBuscado.precio}</p>
+  <p class="my-2 fw-bold">Stock: ${detalleBuscado.stock}</p>
   <p class="my-2">Categoría: ${detalleBuscado.categoria}</p>
 </div>`;
 };
@@ -176,6 +183,7 @@ window.editarProducto = function (codigoBuscado) {
   descripcion.value = productoBuscado.descripcion;
   imagen.value = productoBuscado.imagen;
   precio.value = productoBuscado.precio;
+  stock.value = productoBuscado.stock;
   categoria.value = productoBuscado.categoria;
 };
 
@@ -187,6 +195,7 @@ function actualizarProducto() {
   listaProductos[posicionProductoBuscado].descripcion = descripcion.value;
   listaProductos[posicionProductoBuscado].imagen = imagen.value;
   listaProductos[posicionProductoBuscado].precio = precio.value;
+  listaProductos[posicionProductoBuscado].stock = stock.value;
   listaProductos[posicionProductoBuscado].categoria = categoria.value;
   generarProductoEnLocalStorage();
   actualizarTabla();

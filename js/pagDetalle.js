@@ -48,7 +48,7 @@ contenedorDetalle.innerHTML = `<article class="row separarArticle">
       <h2 class="color-primary">
         $${listaProductos[1].precio}
       </h2>
-      <p class="fw-bold">Stock Disponible</p>
+      <p class="fw-bold">Stock disponible: ${listaProductos[1].stock}</p>
       <div>
 
       </div>
