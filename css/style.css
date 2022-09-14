@@ -7,9 +7,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(/img/fondoBODY);
 }
-
+.mainPrincipal{
+    background-image: url(/img/pexels-scott-webb-2824173.jpg);
+}
 
 .logoEmpresa{
 height: 100px;
