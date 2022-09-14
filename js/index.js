@@ -63,7 +63,7 @@ const displayProducts = (productos) => {
               0,
               30
             )}...
-            <button type="button" class="btn btn-link bg-transparent outline-none" data-bs-toggle="popover" data-bs-title="${producto.nombreProducto}" data-bs-content="${producto.descripcion}">ver mas</button>
+            <button type="button" class="btn btn-link bg-transparent outline-none" data-bs-toggle="popover" data-bs-title="${producto.nombreProducto}" data-bs-content="${producto.nombreProducto}">ver mas</button>
             <p class="card-text text-light">${producto.precio}</p>
             <button type="button" class="btn btn-warning" id="botonCarrito">Comprar<i class="fas fa-shopping-cart"></i></button>
           </div>
