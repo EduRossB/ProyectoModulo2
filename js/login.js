@@ -22,6 +22,8 @@ let iniciarClaveAdmin = "Matias1234@";
 function iniciarSesionAdmin(e){
     e.preventDefault();
 if (iniciaSesionEmail.value == nombreUsuarioAdmin && iniciaSesionContraseña.value == iniciarClaveAdmin){
+    localStorage.setItem("inicioSesion", "activo");
+    localStorage.setItem("usuarioLogueado", iniciaSesionEmail.value)
   window.location="/pages/pagAdmin.html";
 
 }
@@ -80,7 +82,7 @@ inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
 console.log(listaUsuarios)
 
-let estadoSesion = 0;
+
 
 // inicio serion invitado
 function iniciaSesionInvitado(e){
@@ -91,7 +93,6 @@ function iniciaSesionInvitado(e){
         localStorage.setItem("usuarioLogueado", iniciaSesionEmail.value)
         window.location="/index.html";
         i = 50;
-        estadoSesion = 1;
     }else{
         Swal.fire('Los datos ingresados son incorrectos')
     }
