@@ -80,16 +80,25 @@ inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
 console.log(listaUsuarios)
 
+let estadoSesion = 0;
+
+// inicio serion invitado
 function iniciaSesionInvitado(e){
     e.preventDefault();
    for(let i = 0; i < listaUsuarios.length; i++){
     if(iniciaSesionEmail.value == listaUsuarios[i].email && iniciaSesionContraseña.value == listaUsuarios[i].contraseña){
+        localStorage.setItem("inicioSesion", "activo");
+        localStorage.setItem("usuarioLogueado", iniciaSesionEmail.value)
         window.location="/index.html";
         i = 50;
+        estadoSesion = 1;
+    }else{
+        Swal.fire('Los datos ingresados son incorrectos')
     }
 }
 }
 
+console.log(estadoSesion)
+
+
          
-         
-    

@@ -21,7 +21,7 @@
   </head>
   <body>
 <!-- inicio nav -->
-  <nav class="navbar navbar-expand-lg  navbarPagPrincipal">
+  <nav id="navCompleto" class="navbar navbar-expand-lg  navbarPagPrincipal">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.html">
         <img src="/img/RollingMarket1.png" alt="logo de la empresa" class="logoEmpresa">
@@ -31,20 +31,28 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-regular fa-user"></i>
+          <li id="desplegable" class="nav-item dropdown">
+            <a 
+            id="etiquetaUsuario"
+            class="nav-link dropdown-toggle" 
+            href="#" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"><i class="fa-regular fa-user"></i>
               Usuario
             </a>
-            <ul class="dropdown-menu bg-secondary">
+            <ul 
+            class="dropdown-menu bg-secondary"
+            id="ulUsuario"
+            >
               <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Tus compras</a></li>
               <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Promociones para ti</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Cerrar Sesion</a></li>
+              <li><a id="cerrarSesion" class="dropdown-item text-warning" href="/index.html">Cerrar Sesion</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/login.html">LogIn</a>
+            <a id="etiquetaLogin" class="nav-link" href="/pages/login.html">LogIn</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/pagDetalles.html">Productos</a>
@@ -268,5 +276,6 @@
     <script src="/js/stock.js"></script>
     <script src="/js/modalCarrito.js"></script>
     <script src="/js/carrito.js"></script>
+    <script src="/js/logout.js"></script>
   </body>
 </html>
