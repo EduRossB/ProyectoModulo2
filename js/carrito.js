@@ -31,9 +31,9 @@ botonVaciar.addEventListener('click', () => {
 //PRIMER PRIMER PASO, INYECTAR EL HTML
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
-    div.classList.add('producto')
+    div.classList.add('producto','row','col-12','col-md-5','col-lg-2')
     div.innerHTML = `
-    <img src=${producto.img} alt= "">
+    <img src=${producto.img} alt= "${producto.nombre}">
     <h3>${producto.nombre}</h3>
     <p>${producto.desc}</p>
     <p class="precioProducto">Precio:$ ${producto.precio}</p>
@@ -115,3 +115,4 @@ const actualizarCarrito = () => {
    
 
 }
+

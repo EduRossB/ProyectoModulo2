@@ -48,6 +48,7 @@ contenedorDetalle.innerHTML = `<article class="row separarArticle">
       <h2 class="color-primary">
         $${listaProductos[1].precio}
       </h2>
+      <p class="fw-bold">Stock disponible: ${listaProductos[1].stock}</p>
       <div>
 
       </div>
@@ -60,7 +61,7 @@ contenedorDetalle.innerHTML = `<article class="row separarArticle">
   ${listaProductos[1].descripcion}
   </p>
   <article>
-    <a href="#" class="btn colorAmarillo text-black">AGREGAR A CARRITO</a>
+    <a href="/pages/pagError404.html" class="btn colorAmarillo text-black">AGREGAR A CARRITO</a>
     <hr>
   </article>
   <br>

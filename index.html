@@ -17,13 +17,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/carrito.css">
     <title>RollingMarket</title>
+    <link rel="shortcut icon" href="/img/Logo/icono sin fondo.png" />
   </head>
   <body>
-
+<!-- inicio nav -->
   <nav class="navbar navbar-expand-lg  navbarPagPrincipal">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.html">
-        <img src="img/RollingMarket1.png" alt="logo de la empresa" class="logoEmpresa">
+        <img src="/img/RollingMarket1.png" alt="logo de la empresa" class="logoEmpresa">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,10 +37,10 @@
               Usuario
             </a>
             <ul class="dropdown-menu bg-secondary">
-              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Tus compras</a></li>
-              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Promociones para ti</a></li>
+              <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Tus compras</a></li>
+              <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Promociones para ti</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-warning" href="pages/pagError404.html">Cerrar Sesion</a></li>
+              <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Cerrar Sesion</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -63,7 +64,7 @@
       </div>
     </div>
   </nav>
- 
+ <!-- fin nav -->
 
 <main class="mainPrincipal">
 <section>
@@ -90,55 +91,8 @@
   </div>
 </section>
 
-<aside>
-  <div class="row justify-content-center m-3">
-    <div class="col-lg-3 mt-3">
-      <div class="card bg-secondary cardFormasDePago">
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Tarjetas de credito</h5>
-          <p class="card-text text-light">Computadoras en 12 y 18 cuotas <br> sin interes</p>
-          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 mt-3">
-      <div class="card bg-secondary cardFormasDePago">
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Tarjetas de Debito</h5>
-          <p class="card-text text-light">Descuentos de hasta el 25% con Visa y MasterCard</p>
-          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 mt-3">
-      <div class="card bg-secondary cardFormasDePago">
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Efectivo</h5>
-          <p class="card-text text-light">Descuentos de hasta 40% con pagos en Efectivo en Celulares</p>
-          <a href="/pages/pagError404.html" class="btn btn-warning">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</aside>
-
-<section>
-  <h1 class="fs-1 text-center my-5 text-dark">Productos pagina Administracion</h1>
-  <div id="productosLocalStorage" class="row row-cols-1 row-cols-md-2 g-4 m-2">
-</section>
-  
-<section>
-  <h1 id = "NuevosProductos"class="fs-1 text-center my-5 text-dark">Nuevos Productos</h1>
-
-  <div id="sectionProducts" class="row row-cols-1 row-cols-md-2 g-4 m-2">
-    
-  </div>
-</section>
-
-<aside>
   <!-- seccion carrito -->
-   <section id="contenedor-productos" class="body-compus">
-    
+   <section id="contenedor-productos" class="body-compus row justify-content-evenly w-100">
   </section>
   <!-- seccion modal carrito -->
 <div class="modal-contenedor">
@@ -152,138 +106,108 @@
   </div>
 </div>
 
-  <!--Collage informativo-->
-  <div id="collage" class="container-fluid my-5">
-    <div class="text-center my-5">
-        <h3 class="mb-5 title-collage">La Seccion Gamer mas completa del planeta!</h3>
-        <p class="subtitle-collage">Encontrá en Rolling Market todos los elementos para tu diversion Gamer
-          <span><i class="bi bi-emoji-laughing"></i></span>
-        </p>
+<aside>
+  <div class="row justify-content-center m-3">
+    <div class="col-lg-3 mt-3">
+      <div class="card bg-dark text-center fuenteMontserrat cardFormasDePago">
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Tarjetas de credito</h5>
+          <p class="card-text text-light">Computadoras en 12 y 18 cuotas <br> sin interes</p>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Ver más</a>
+        </div>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="container-collage">
-                <img class="img-collage"
-                    src="https://portalvidalivre.com/uploads/content/image/71692/Design_sem_nome__6___1_.jpg"
-                    alt="Teclado Gamer">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      El teclado HyperX permite que puedas disfrutar de horas ilimitadas!
-                    </p>
-                </div>
-            </div>
-            <div class="container-collage mt-3">
-                <img class="img-collage"
-                    src="https://e.rpp-noticias.io/xlarge/2019/11/18/8654301231jpg.jpg"
-                    alt="teclado Gamer inteligente">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      Disfrutá de tus partidas en otro nivel con Redragon! Teclado Inteligente!
-                    </p>
-                </div>
-            </div>
+    <div class="col-lg-3 mt-3">
+      <div class="card bg-dark text-center fuenteMontserrat cardFormasDePago">
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Tarjetas de Debito</h5>
+          <p class="card-text text-light">Descuentos de hasta el 25% con Visa y MasterCard</p>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Ver más</a>
         </div>
-        <div class="col-md-2 col-sm-4">
-            <div class="container-collage my-3">
-                <img class="img-collage"
-                    src="https://www.tecnocomphn.com/storage/app/uploads/public/5f7/371/279/5f73712799388998381928.jpeg"
-                    alt="Mouse Gamer 1">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla❗❗
-                    </p>
-                </div>
-            </div>
-            <div class="container-collage">
-                <img class="img-collage"
-                    src="https://www.qloud.ar/SITES/IMG/joy-div-computers-09-2021/236_10-03-2022-01-03-46-mouse-idon4.png"
-                    alt="Mouse Gamer 2">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      Con sus 7 botones podrás tener mayor control e independencia para ejecutar❗❗
-                    </p>
-                </div>
-            </div>
-            <div class="container-collage my-3">
-                <img class="img-collage"
-                    src="https://mla-s1-p.mlstatic.com/865935-MLA42774986878_072020-F.jpg"
-                    alt="Mouse Gamer 3">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      La funcionalidad al alcance de tu mano
-                      El sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="container-collage">
-                <img class="img-collage"
-                    src="https://i.blogs.es/25be06/auricularesjugonesap/840_560.jpg"
-                    alt="Auriculares Gamer">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas🔥.
-                    </p>
-                </div>
-            </div>
-            <div class="container-collage mt-3">
-                <img class="img-collage"
-                    src="https://gamageek.com/wp-content/uploads/2021/01/Mejores-Cascos-Gaming-por-100-a-200-euros-Logitech-G935-500x454.jpg"
-                    alt="Auriculares Gamer">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                      Su batería de larga duración te dará horas interminables de sonidos envolventes 🔥en tus partidas. Sus orejeras son sinónimo de comodidad
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mt-3 text-center">
-            <div class="container-collage img-size">
-                <img class="img-collage"
-                    src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Yoistick Nintendo">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img"> Y si volvemos a los de antes? La mejor Nintendo la podes encontrar aqui al mejor precio 🎉👏!</p>
-                </div>
-            </div>
-            <div class="container-collage mt-3 img-size">
-                <img class="img-collage" src="https://images.pexels.com/photos/6499182/pexels-photo-6499182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Moto realidad virtual">
-                <div class="overlay">
-                    <p class="text-overlay text-sm-img">
-                        En nuestra Pagina te desafiamos a que vengas a visitarnos y probar nuestra nueva Motocicleta de alta Gama de Reliada Virtual! tenemos lo ultimo, te lo dijimos!🔥🔥🔥🔥🔥
-                    </p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+    <div class="col-lg-3 mt-3">
+      <div class="card bg-dark text-center fuenteMontserrat cardFormasDePago">
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Efectivo</h5>
+          <p class="card-text text-light">Descuentos de hasta 40% con pagos en Efectivo en Celulares</p>
+          <a href="/pages/pagError404.html" class="btn btn-warning">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </aside>
 
+
+
 <section>
-  <div class="card text-center m-5 seccionGamer">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active bg-warning text-light " href="/pages/pagError404.html">Teclados</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="/pages/pagError404.html">Auriculares</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href ="/pages/pagError404.html">Accesorios</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title fs-1 text-light">Seccion Gamer</h5>
-      <p class="card-text text-light">En esta seccion encontrarás todos los elementos que necesitas para lograr el mayor Rendimiento y Confort en tus Juegos</p>
-      <img src="/img/tecladoGamer.webp" class="card-img-top mouseGamer img-fluid" alt="teclado Gamer">
-      <a href="./pages/pagError404.html" class="btn btn-warning mt-3">Ingresar a la Seccion</a>
-    </div>
+  <h1 id = "NuevosProductos"class="fs-1 text-center fuenteMontserrat my-5 text-dark">Tienda de Productos</h1>
+
+  <div id="sectionProducts" class="row row-cols-1 row-cols-md-2 g-4 m-2">
+
   </div>
 </section>
 
+<!-- carousel -->
+<section class="container w-70 py-5">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card bg-dark text-white m-width-100" >
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body">
+        <h3 class="card-title">Experiencia Gamer</h3>
+        <p class="card-text subtitulo fs-3">A la hora de elegir</p>
+        <p class="card-text fs-5">Tamaño, tecnología del panel, resolución, HDR, sistema operativo son factores decisivos</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="/img/televisor.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="card bg-dark text-white m-width-100" >
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body">
+        <h3 class="card-title">Smart Tv</h3>
+        <p class="card-text subtitulo fs-3">Resolución 4K: sí o sí.</p>
+        <p class="card-text fs-5">Y es que, lo primero y más importante, es que necesitas una televisión 4K</p>
+      </div>
+    </div>
+    <div class="col-md-6 imgGamer">
+      <img src="/img/smart.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="card bg-dark text-white m-width-100">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body">
+        <div class="card-body">
+          <h3 class="card-title">Teclados</h3>
+          <p class="card-text subtitulo fs-3">Con el teclado HyperX disfruta de horas ilimitadas!</p>
+          <p class="card-text fs-5">Disfrutá de tus partidas en otro nivel con un Teclado Inteligente!</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-6 imgGamer">
+      <img src="/img/tecladoGamer.webp" class="img-fluid rounded-start" alt="teclado gamer">
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+  
 </main>
 
 
@@ -296,15 +220,15 @@
 
         <div class="col-12 col-md-2 col-lg-2 mt-3">
           <h3 class="text-light fs-5 mt-3  mt-3 ">Compañia</h3>
-          <a class="text-decoration-none text-secondary" href="pages/pagNosotros.html"
+          <a class="text-decoration-none text-secondary" href="/pages/pagNosotros.html"
             >Nosotros.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/pagError404.html"
+          <a class="text-decoration-none text-secondary " href="/pages/pagError404.html"
             >Contacto.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/pagError404.html" 
+          <a class="text-decoration-none text-secondary " href="/pages/pagError404.html" 
             >Privacidad.</a
           >
           <br />
@@ -312,11 +236,11 @@
 
         <div class="col-12 col-md-3 col-lg-3 mt-3">
           <h3 class="text-light fs-5 mt-3">Politica de privacidad</h3>
-          <a class="text-decoration-none text-secondary" href="pages/pagError404.html" 
+          <a class="text-decoration-none text-secondary" href="/pages/pagError404.html" 
             >Terminos de usos.</a
           >
           <br />
-          <a class="text-decoration-none text-secondary " href="pages/pagError404.html" 
+          <a class="text-decoration-none text-secondary " href="/pages/pagError404.html" 
             >Informacion corporativa.</a
           >
           <br />

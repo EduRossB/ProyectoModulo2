@@ -35,3 +35,12 @@ export function numerosPrecio(input){
         return false;
     }
 }
+export function numerosStock(input){
+    if(input.value.length >= 2 && input.value.length <=8){
+        input.className = 'form-control is-valid';
+        return true;
+    }else{
+        input.className = 'form-control is-invalid';
+        return false;
+    }
+}

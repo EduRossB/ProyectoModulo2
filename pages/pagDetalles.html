@@ -13,45 +13,64 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/carrito.css">
     <link rel="stylesheet" href="/css/detalle.css">
     <title>RollingMarket</title>
+    <link rel="shortcut icon" href="/img/Logo/icono sin fondo.png" />
   </head>
   <body>
     <header>
-      <hr class="lineaHoriz" />
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-5">
-        <div class="container-fluid justify-content-evenly">
-          <a class="navbar-brand fuentNavBrand text-warning fw-bold" href="#"
-            ><img
-              class="w-50"
-              src="../img/logo_y_nombre_sin_fondo.png"
-              alt="logo"
-          /></a>
-          <div
-            class="d-flex justify-content-center"
-            id="navbarSupportedContent"
-          >
-            <form>
-              <input
-                class="form-control me-2 colorgris text-light"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Buscador"
-              />
-            </form>
-          </div>
-          <div class="d-flex justify-content-center">
-            <a href="#"
-              ><i class="bi bi-person-circle text-light fs-5 ms-3"></i
-            ></a>
-            <a href="#"><i class="bi bi-cart4 text-light fs-5 ms-3"></i></a>
-          </div>
-        </div>
-      </nav>
+<!-- inicio nav -->
+<nav class="navbar navbar-expand-lg  navbarPagPrincipal">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/index.html">
+      <img src="/img/RollingMarket1.png" alt="logo de la empresa" class="logoEmpresa">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/pages/pagError404.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-user"></i>
+            Usuario
+          </a>
+          <ul class="dropdown-menu bg-secondary">
+            <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Tus compras</a></li>
+            <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Promociones para ti</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-warning" href="/pages/pagError404.html">Cerrar Sesion</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/login.html">LogIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/pagDetalles.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <button id="boton-carrito"><i class="fas fa-shopping-cart"></tr></i><span id="contadorCarrito">0</span></button>
+        </li>
+      </ul>
+      <form id="searchForm" class="d-flex" role="search">
+        <input id="searchProductInput" class="form-control me-2" type="text" placeholder="Buscar Productos" aria-label="Search">
+        <button id="boton" class="btn btn-outline-dark" type="submit">
+          <!-- Este  boton debe permitir buscar un producto por su nombre o categoria -->
+          Buscar
+        </button>
+      </form>
+      <div id="productSearch" class="alert alert-info d-none" role="alert">
+        ¡Producto encontrado!
+    </div>
+    </div>
+  </div>
+</nav>
+<!-- fin nav -->
       
     </header>
       
-    <main class="container mt-2 mb-5 ">
+    <main class="bg-light ">
         <h1 class="display-1 text-center fuenteMontserrat"> Rolling Market</h1>
         <hr />
         <div class="container contenedorDetalle"></div>
@@ -67,7 +86,7 @@
                   <h5 class="card-title">
                     Placa de Video Zotac GeForce RTX 3090 24GB GDDR6X Trinity</h5>
                   <img src="/img/PagAdministracion/rtx-3080.jfif" alt=" placa asus 3090" class="w-100 separarArticle">
-                  <a href="#" class="btn colorAmarillo text-black">VER DETALLE</a>
+                  <a href="/pages/pagError404.html" class="btn colorAmarillo text-black">VER DETALLE</a>
                 </div>
               </div>
             </div>
@@ -77,7 +96,7 @@
                   <h5 class="card-title">
                     Placa de Video ASUS GeForce RTX 3070 Ti ROG STRIX GAMING </h5>
                  <img src="/img/PagAdministracion/rtx3060.jfif" alt=" placa ASUS" class="w-100 separarArticle">
-                  <a href="#" class="btn colorAmarillo text-black">VER DETALLE</a>
+                  <a href="/pages/pagError404.html" class="btn colorAmarillo text-black">VER DETALLE</a>
                 </div>
               </div>
             </aside>
@@ -87,7 +106,7 @@
                   <h5 class="card-title">
                     Notebook Exo 14" Intel Celeron 4600i 8gb Ram </h5>
                  <img src="/img/PagAdministracion/notebook exo.jpg" alt=" notebook exo" class="w-100 separarArticle">
-                  <a href="#" class="btn colorAmarillo text-black">VER DETALLE</a>
+                  <a href="/pages/pagError404.html" class="btn colorAmarillo text-black">VER DETALLE</a>
                 </div>
               </div>
             </aside>
@@ -96,24 +115,24 @@
       </section>
     </main>
 
-    <footer class=" bg bg-dark p-5 ">
+    <footer class="bg bg-dark p-5 ">
       <section>
         <div class="row">
-          <div class="col-12 col-md-4 my-3 col-lg-3">
-            <img src="../img/logo_y_nombre_sin_fondo.png" alt="Logo de empresa" width="210px"Q1 />
+          <div class="col-12 col-md-4 col-lg-3">
+            <img src="/img/logo_y_nombre_sin_fondo (1).png" alt="Logo de empresa" width="210px"Q1 />
           </div>
   
           <div class="col-12 col-md-2 col-lg-2 mt-3">
             <h3 class="text-light fs-5 mt-3bebasNeue mt-3 bebasNeue ">Compañia</h3>
-            <a class="text-decoration-none text-secondary" href="pages/pagNosotros.html"
+            <a class="text-decoration-none text-secondary" href="/pages/pagNosotros.html"
               >Nosotros.</a
             >
             <br />
-            <a class="text-decoration-none text-secondary " href="pages/"
+            <a class="text-decoration-none text-secondary " href="/pages/pagError404.html"
               >Contacto.</a
             >
             <br />
-            <a class="text-decoration-none text-secondary " href="pages/" 
+            <a class="text-decoration-none text-secondary " href="/pages/pagError404.html" 
               >Privacidad.</a
             >
             <br />
@@ -121,22 +140,22 @@
   
           <div class="col-12 col-md-3 col-lg-3 mt-3">
             <h3 class="text-light fs-5 mt-3 bebasNeue">Politica de privacidad</h3>
-            <a class="text-decoration-none text-secondary" href="pages/" 
+            <a class="text-decoration-none text-secondary" href="/pages/pagError404.html" 
               >Terminos de usos.</a
             >
             <br />
-            <a class="text-decoration-none text-secondary " href="pages/" 
+            <a class="text-decoration-none text-secondary " href="/pages/pagError404.html" 
               >Informacion corporativa.</a
             >
             <br />
           </div>
           <div class="col-12 col-md-3 col-lg-3 mt-3">
             <h3 class="text-light fs-5 mt-3 bebasNeue">Redes Sociales
-              <i class="bi bi-facebook"></i>
-              <i class="bi bi-twitter"></i>
-              <i class="bi bi-instagram"></i>
+              <a href="https://www.facebook.com/"><i class="bi bi-facebook text-light"></i></a>
+              <a href="https://www.twitter.com/"><i class="bi bi-twitter text-light"></i></a>
+              <a href="https://www.instagram.com/"><i class="bi bi-instagram text-light"></i></a>
             </h3>
-          </div>  
+          </div>
         </div>
       </section>
     </footer>
