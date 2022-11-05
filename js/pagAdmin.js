@@ -14,7 +14,7 @@ let imagen = document.querySelector("#imagen");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
 let categoria = document.querySelector("#categoria");
-let formProducto = document.querySelector("#formProducto");
+let formProducto = document.getElementById("formProducto");
 let btnAgregarProcucto = document.querySelector("#botonAgregarProducto");
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
@@ -55,16 +55,14 @@ function cargarInicial() {
   }
 }
 
+
+
 function AgregarProducto() {
   nuevoProducto = true;
-  limpiarFormulario();
   modalProducto.show();
   codigo.value = uuidv4();
 }
 
-function limpiarFormulario() {
-  formProducto.reset();
-}
 
 function generarProductoNuevo(e) {
   e.preventDefault();
@@ -81,7 +79,8 @@ function generarProductoNuevo(e) {
     listaProductos.push(nuevoProducto);
     generarProductoEnLocalStorage();
     crearObjetoEnHTML(nuevoProducto);
-    limpiarFormulario();
+    modalProducto.hide();
+    formProducto.reset();
     codigo.value = uuidv4();
   } else {
     actualizarProducto();
