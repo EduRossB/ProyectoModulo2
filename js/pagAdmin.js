@@ -141,7 +141,6 @@ window.borrarProducto = function (codigo) {
     confirmButtonText: "Borrar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
-    console.log(result);
     if (result.isConfirmed) {
       let copiaProductos = listaProductos.filter(
         (itemProducto) => itemProducto.codigo != codigo

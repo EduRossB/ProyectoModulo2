@@ -58,7 +58,6 @@ function crearUsuario(e){
         limpíarFormulario();
         function limpíarFormulario(){
             formulario.reset()};
-        console.log(listaUsuarios);
         crearModal.hide();
         Swal.fire({
             position: 'top-end',
@@ -78,7 +77,6 @@ alert("debe completar todos los datos")
 
 inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
-console.log(listaUsuarios)
 
 function iniciaSesionInvitado(e){
     e.preventDefault();
