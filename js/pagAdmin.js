@@ -86,8 +86,8 @@ function generarProductoNuevo(e) {
       descripcion.value,
       imagen.value,
       precio.value,
+      categoria.value,
       stock.value,
-      categoria.value
     );
     listaProductos.push(nuevoProducto);
     generarProductoEnLocalStorage();
@@ -113,6 +113,7 @@ function crearObjetoEnHTML(Producto) {
   <td class="tdTabla">${Producto.descripcion}</td>
   <td class="tdTabla">${Producto.imagen}</td>
   <td class="tdTabla">${Producto.precio}</td>
+  <td class="tdTabla">${Producto.stock}</td>
   <td class="tdTabla">${Producto.categoria}</td>
   <td>
     <button class="bg-dark mx-2">
