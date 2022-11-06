@@ -62,9 +62,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/pages/pagDetalles.html">Productos</a>
         </li>
-        <li class="nav-item">
-          <button id="boton-carrito"><i class="fas fa-shopping-cart"></tr></i><span id="contadorCarrito">0</span></button>
-        </li>
       </ul>
       <form id="searchForm" class="d-flex" role="search">
         <input id="searchProductInput" class="form-control me-2" type="text" placeholder="Buscar Productos" aria-label="Search">
@@ -102,6 +99,7 @@
               <th scope="col">Descripción</th>
               <th scope="col">IMG</th>
               <th scope="col">Precio</th>
+              <th scope="col">Stock</th>
               <th scope="col">Categoría</th>
               <th scope="col">Opciones</th>
             </tr>
@@ -201,7 +199,7 @@
                   class="form-control inputFormulario"
                   placeholder="##"
                   maxlength="10"
-                  minlength="2"
+                  minlength="0"
                 />
                 <div class="invalid-feedback">Ingresar stock valido</div>
               </div>
@@ -221,6 +219,119 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Modal Editar Producto -->
+    <div
+      class="modal fade"
+      id="modalEditarProductos"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-warning">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ejemploModalTitulo">
+              Administrar Serie
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formProductoE">
+              <div class="mb-3">
+                <label for="codigo">Código</label>
+                <input
+                  id="codigoE"
+                  type="text"
+                  class="form-control inputFormulario bg-dark"
+                  placeholder="########"
+                  disabled
+                />
+              </div>
+              <div class="mb-3">
+                <label for="titulo">Nombre de producto</label>
+                <input
+                  id="nombreProductoE"
+                  type="text"
+                  class="form-control inputFormulario"
+                  placeholder="Ej: Monitor Samsung"
+                  maxlength="65"
+                  minlength="3"
+                />
+                <div class="invalid-feedback">Ingrese un nombre de producto</div>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Descripción</label>
+                <textarea
+                  id="descripcionE"
+                  rows="4"
+                  class="form-control inputFormulario"
+                  placeholder="Ej: Monitor de 24` marca Samsung"
+                  maxlength="300"
+                  minlength="5"
+                ></textarea>
+                <div class="invalid-feedback">Ingrese una descripción</div>
+              </div>
+              <div class="mb-3">
+                <label for="imagen">Imagen</label>
+                <input
+                  id="imagenE"
+                  type="text"
+                  class="form-control inputFormulario"
+                  placeholder="Ej: /img/ejemplo.jpg"
+                  maxlength="200"
+                  minlength="1"
+                />
+                <div class="invalid-feedback">Ingrese un link de imagen</div>
+              </div>
+              <div class="mb-3">
+                <label for="precio">Precio</label>
+                <input
+                  id="precioE"
+                  type="number"
+                  class="form-control inputFormulario"
+                  placeholder="xxxx"
+                  maxlength="10"
+                  minlength="2"
+                />
+                <div class="invalid-feedback">Precio requerido sin puntos ni simbolos</div>
+              </div>
+              <div class="mb-3">
+                <label for="precio">Cantidad stock</label>
+                <input
+                  id="stockE"
+                  type="number"
+                  class="form-control inputFormulario"
+                  placeholder="##"
+                  maxlength="10"
+                  minlength="0"
+                />
+                <div class="invalid-feedback">Ingresar stock valido</div>
+              </div>
+              <div class="mb-3">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" required class="form-control inputFormulario">
+                  <option class="inputFormulario" value="">Selecione una opción</option>
+                  <option class="inputFormulario" value="computacion">Computación</option>
+                  <option class="inputFormulario" value="gaming">Gaming</option>
+                  <option class="inputFormulario" value="smartphone">Smartphones</option>
+                  <option class="inputFormulario" value="tvmonitor">TV/Monitor</option>
+                </select>
+              </div>
+              <button class="btn btn-warning" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="modal" id="modalInfo" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content bg-warning ">

@@ -3,7 +3,6 @@ import { Producto } from "./classProductos.js";
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
-console.log(listaProductos);
 
 let contenedorDetalle = document.querySelector(".contenedorDetalle");
 

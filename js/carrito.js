@@ -27,7 +27,7 @@ botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
 })
-
+console.log(stockProductos)
 //PRIMER PRIMER PASO, INYECTAR EL HTML
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
@@ -83,7 +83,6 @@ const eliminarDelCarrito = (prodId) => {
 
     carrito.splice(indice, 1) 
     actualizarCarrito() 
-    console.log(carrito)
 }
 
 const actualizarCarrito = () => {
@@ -110,7 +109,6 @@ const actualizarCarrito = () => {
     //SEPTIMO PASO
     contadorCarrito.innerText = carrito.length 
     //OCTAVO PASO
-    console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
    
 

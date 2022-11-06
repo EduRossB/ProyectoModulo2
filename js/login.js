@@ -15,7 +15,7 @@ inicioFormulario.addEventListener("submit", iniciarSesionAdmin);
 
 // Usuario y clave de admin
 let nombreUsuarioAdmin = "rolling@gmail.com";
-let iniciarClaveAdmin = "Matias1234@";
+let iniciarClaveAdmin = "Rolling123456@";
 
 
 // inicio sesion admin
@@ -58,7 +58,6 @@ function crearUsuario(e){
         limpíarFormulario();
         function limpíarFormulario(){
             formulario.reset()};
-        console.log(listaUsuarios);
         crearModal.hide();
         Swal.fire({
             position: 'top-end',
@@ -78,7 +77,6 @@ alert("debe completar todos los datos")
 
 inicioFormulario.addEventListener("submit", iniciaSesionInvitado);
 
-console.log(listaUsuarios)
 
 function iniciaSesionInvitado(e){
     e.preventDefault();

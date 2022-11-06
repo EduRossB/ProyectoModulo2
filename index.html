@@ -30,7 +30,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+        <ul id="listaNavBarAdmin" class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-regular fa-user"></i>
@@ -44,13 +44,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/login.html">LogIn</a>
+            <a class="nav-link" href="/pages/login.html">Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/pagDetalles.html">Productos</a>
+            <a class="nav-link" href="#NuevosProductos">Productos Nuevos</a>
           </li>
           <li class="nav-item">
-            <button id="boton-carrito"><i class="fas fa-shopping-cart"></tr></i><span id="contadorCarrito">0</span></button>
+            <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
           </li>
         </ul>
         <form id="searchForm" class="d-flex" role="search">
@@ -60,9 +60,7 @@
             Buscar
           </button>
         </form>
-        <div id="productSearch" class="alert alert-info d-none" role="alert">
-          ¡Producto encontrado!
-      </div>
+        <div id="productSearch" class="" ></div>
       </div>
     </div>
   </nav>
@@ -268,5 +266,6 @@
     <script src="/js/stock.js"></script>
     <script src="/js/modalCarrito.js"></script>
     <script src="/js/carrito.js"></script>
+    <script src="/js/pagNosotros.js"></script>
   </body>
 </html>
