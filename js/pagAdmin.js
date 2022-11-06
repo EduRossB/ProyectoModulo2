@@ -14,6 +14,16 @@ let imagen = document.querySelector("#imagen");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
 let categoria = document.querySelector("#categoria");
+
+// input editar productos 
+let codigoE = document.querySelector("#codigoE");
+let nombreProductoE = document.querySelector("#nombreProductoE");
+let descripcionE = document.querySelector("#descripcionE");
+let imagenE = document.querySelector("#imagenE");
+let precioE = document.querySelector("#precioE");
+let stockE = document.querySelector("#stockE");
+let categoriaE = document.querySelector("#categoriaE");
+
 let formProducto = document.getElementById("formProducto");
 let btnAgregarProcucto = document.querySelector("#botonAgregarProducto");
 let listaProductos =
@@ -23,6 +33,9 @@ let contenedorInfoProducto = document.querySelector("#contenedorInfoProducto");
 
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalProductos")
+);
+const modalEditarProducto = new bootstrap.Modal(
+  document.querySelector("#modalEditarProductos")
 );
 const modalInfo = new bootstrap.Modal(document.querySelector("#modalInfo"));
 
@@ -176,14 +189,15 @@ window.editarProducto = function (codigoBuscado) {
   let productoBuscado = listaProductos.find(
     (Producto) => Producto.codigo === codigoBuscado
   );
-  modalProducto.show();
-  codigo.value = productoBuscado.codigo;
-  nombreProducto.value = productoBuscado.nombreProducto;
-  descripcion.value = productoBuscado.descripcion;
-  imagen.value = productoBuscado.imagen;
-  precio.value = productoBuscado.precio;
-  stock.value = productoBuscado.stock;
-  categoria.value = productoBuscado.categoria;
+  modalEditarProducto.show();
+  codigoE.value = productoBuscado.codigo;
+  nombreProductoE.value = productoBuscado.nombreProducto;
+  descripcionE.value = productoBuscado.descripcion;
+  imagenE.value = productoBuscado.imagen;
+  precioE.value = productoBuscado.precio;
+  stockE.value = productoBuscado.stock;
+  categoriaE.value = productoBuscado.categoria;
+
 };
 
 function actualizarProducto() {
@@ -203,6 +217,7 @@ function actualizarProducto() {
     "Los datos del producto fueron actualizados",
     "success"
   );
-  modalProducto.hide();
   limpiarFormulario();
+  modalProducto.hide();
+
 }
