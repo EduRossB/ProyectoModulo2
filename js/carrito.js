@@ -27,7 +27,7 @@ botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
 })
-
+console.log(stockProductos)
 //PRIMER PRIMER PASO, INYECTAR EL HTML
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
